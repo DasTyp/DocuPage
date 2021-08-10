@@ -10,14 +10,19 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
+/**
+ * This class controls the hole game
+ */
 public class Game
 {
     Player player;
     @SerializedName("rooms")
     List<Room> rooms;
 
-    // Main playing method with the possible commands and their method call
+    /**
+     * Main playing method with the possible commands and their method call
+     * @param player
+     */
     public void play(Player player)
     {
         Scanner userInput = new Scanner(System.in);
@@ -70,7 +75,10 @@ public class Game
         }
     }
 
-    // Look method: shows for the current room: all available items and all available ways
+    /**
+     * Look method: shows for the current room: all available items and all available ways
+     * @param lookingAt
+     */
     public void look(String lookingAt)
     {
         // Boolean that indicates if the command "look around" has been written
@@ -114,7 +122,10 @@ public class Game
         }
     }
 
-    // Move method: moves in the chosen direction if it's a valid direction and if there's a way in this direction
+    /**
+     * Move method: moves in the chosen direction if it's a valid direction and if there's a way in this direction
+     * @param direction
+     */
     public void move(String direction)
     {
         if (!isProperInput(direction, Constants.DIRECTIONS))
@@ -132,7 +143,11 @@ public class Game
         }
     }
 
-    // Helper method: Checks if a given string is contained in a given list
+    /**
+     * Helper method: Checks if a given string is contained in a given list
+     * @param input
+     * @param properInput
+     */
     private boolean isProperInput(String input, List<String> properInput)
     {
         if (properInput.contains(input))
@@ -141,7 +156,9 @@ public class Game
             return false;
     }
 
-    // Helper method: Checks if the current room has ways
+    /**
+     * Helper method: Checks if the current room has ways
+     */
     private boolean hasWays()
     {
         if (getCurrentRoom().getRoomWayList().size() == 0)
@@ -150,7 +167,10 @@ public class Game
             return true;
     }
 
-    // Helper method: Returns the way in the given direction if available (otherwise the way is null)
+    /**
+     * Helper method: Returns the way in the given direction if available (otherwise the way is null)
+     * @param direction
+     */
     private Way getWayForDirection(String direction)
     {
         Way resultWay = null;
@@ -165,7 +185,9 @@ public class Game
         return resultWay;
     }
 
-    // Helper method: Returns the current room object
+    /**
+     * Helper method: Returns the current room object
+     */
     private Room getCurrentRoom()
     {
         Room currentRoom = null;

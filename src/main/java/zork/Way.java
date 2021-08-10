@@ -1,12 +1,33 @@
 package zork;
 
+/**
+ * Ways connect rooms
+ */
 public class Way extends Thing
 {
+    /**
+     * direction like north, south, ...
+     */
     private String direction;
+
+    /**
+     * From room (name)
+     */
     private String from;
+
+    /**
+     * To room (name)
+     */
     private String to;
 
-    // Constructor for a way object - calls the super constructor of the parent (thing) and adds the way-specific variables
+    /**
+     * Constructor for a way object - calls the super constructor of the parent (thing) and adds the way-specific variables
+     * @param name
+     * @param description
+     * @param direction
+     * @param from
+     * @param to
+     */
     public Way(String name, String description, String direction, String from, String to)
     {
         super(name, description);
@@ -15,14 +36,14 @@ public class Way extends Thing
         this.to = to;
     }
 
-    // Method simplifies the default output for a way object
+    /**
+     * Method simplifies the default output for a way object
+     */
     @Override
     public String toString()
     {
         return "there's a " + getName() + " going " + direction + ". " + getDescription();
     }
-
-    // Getters and setters for a way
 
     public String getDirection()
     {
