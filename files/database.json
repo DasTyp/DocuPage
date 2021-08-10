@@ -3,222 +3,489 @@
     "points": 0,
     "strength": 100,
     "name": "hugo",
-    "where": "entrance to the house"
+    "where": "Beach room 1"
   },
   "rooms": [
     {
       "ways": [
         {
           "direction": "north",
-          "from": "entrance to the house",
-          "to": "hall",
-          "name": "door",
-          "description": "a glass door with frosted glass"
+          "from": "Beach room 3",
+          "to": "Beach room 2",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
         }
       ],
       "items": [
         {
           "strength": 0,
-          "name": "key",
-          "description": "a large, rusty key ring",
-          "where": "is lying on the ground"
-        },
-        {
-          "strength": 1,
-          "name": "pocket lamp",
-          "description": "a big flashlight that lights a whole room up",
-          "where": "is lying in the corner"
+          "name": "a machete",
+          "description": "a blunt machete",
+          "where": "is half way buried on the beach"
         }
       ],
-      "name": "entrance to the house",
-      "description": "this is where the game starts. type help for guidance."
-    },
-    {
-      "ways": [
-        {
-          "direction": "up",
-          "from": "hall",
-          "to": "attic",
-          "name": "stairway",
-          "description": "it looks dusty and unstable."
-        },
-        {
-          "direction": "east",
-          "from": "hall",
-          "to": "living room",
-          "name": "door",
-          "description": "heavy door made from solid oak with nails on the bars"
-        },
-        {
-          "direction": "south",
-          "from": "hall",
-          "to": "entrance to the house",
-          "name": "door",
-          "description": "a glass door with frosted glass"
-        }
-      ],
-      "items": [
-        {
-          "strength": 0,
-          "name": "briefcase",
-          "description": "an empty briefcase",
-          "where": "is lying on the floor"
-        },
-        {
-          "strength": 5,
-          "name": "pocket knife",
-          "description": "a swiss army multi function pocket knife including USB stick",
-          "where": "is lying in the corner"
-        }
-      ],
-      "name": "hall",
-      "description": "a large dark room stuffed with oak furniture"
-    },
-    {
-      "ways": [
-        {
-          "direction": "down",
-          "from": "attic",
-          "to": "hall",
-          "name": "stairway",
-          "description": "it looks dusty and unstable."
-        }
-      ],
-      "items": [
-        {
-          "strength": 0,
-          "name": "rope",
-          "description": "an old pile of rope",
-          "where": "is lying in the corner of the attic"
-        },
-        {
-          "strength": 15,
-          "name": "sword",
-          "description": "a long shiny sword",
-          "where": "is lying in the corner and was hidden by the rope",
-          "enable": "has rope"
-        }
-      ],
-      "name": "attic",
-      "description": "dusty dusty in here ..."
-    },
-    {
-      "ways": [
-        {
-          "direction": "down",
-          "from": "living room",
-          "to": "cellar",
-          "enable": "has carpet",
-          "name": "trap door",
-          "description": "cast iron trap door"
-        },
-        {
-          "direction": "west",
-          "from": "living room",
-          "to": "hall",
-          "name": "door",
-          "description": "heavy door made from solid oak with nails on the bars"
-        }
-      ],
-      "items": [
-        {
-          "strength": 0,
-          "name": "carpet",
-          "description": "an old oriental carpet",
-          "where": "is in the middle of the room"
-        }
-      ],
-      "name": "living room",
-      "description": "the living room of the house"
-    },
-    {
-      "ways": [
-        {
-          "direction": "east",
-          "from": "cellar",
-          "to": "cellar2",
-          "name": "door",
-          "description": "leaning door"
-        },
-        {
-          "direction": "up",
-          "from": "cellar",
-          "to": "living room",
-          "enable": "has carpet",
-          "name": "trap door",
-          "description": "cast iron trap door"
-        }
-      ],
-      "items": [],
-      "enable": "on pocket lamp",
-      "name": "cellar",
-      "description": "a cold and humid cellar. it's absolutely dark, you can't see anything."
-    },
-    {
-      "ways": [
-        {
-          "direction": "down",
-          "from": "cellar2",
-          "to": "cellar3",
-          "name": "door",
-          "description": "leaning door"
-        },
-        {
-          "direction": "west",
-          "from": "cellar2",
-          "to": "cellar",
-          "name": "door",
-          "description": "leaning door"
-        }
-      ],
-      "items": [],
-      "enable": "on pocket lamp",
-      "name": "cellar2",
-      "description": "A dark empty room."
-    },
-    {
-      "ways": [
-        {
-          "direction": "west",
-          "from": "cellar3",
-          "to": "cellar4",
-          "name": "door",
-          "description": "leaning door"
-        },
-        {
-          "direction": "up",
-          "from": "cellar3",
-          "to": "cellar2",
-          "name": "door",
-          "description": "leaning door"
-        }
-      ],
-      "items": [],
-      "enable": "on pocket lamp",
-      "name": "cellar3",
-      "description": "an empty dark room"
+      "name": "Beach room 3",
+      "description": "the 3rd beach room"
     },
     {
       "ways": [
         {
           "direction": "north",
-          "from": "cellar4",
-          "to": "cellar",
-          "name": "door",
-          "description": "a slippery ramp made from solid wood"
+          "from": "Beach room 2",
+          "to": "Jungle room 3",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
         },
         {
-          "direction": "east",
-          "from": "cellar4",
-          "to": "cellar3",
-          "name": "door",
-          "description": "leaning door"
+          "direction": "south",
+          "from": "Beach room 2",
+          "to": "Beach room 3",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        },
+        {
+          "direction": "west",
+          "from": "Beach room 2",
+          "to": "Beach room 1",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
         }
       ],
       "items": [],
-      "enable": "on pocket lamp",
-      "name": "cellar4",
-      "description": "a large dirty room, full of old furniture."
+      "name": "Beach room 2",
+      "description": "the 2nd beach room"
+    },
+    {
+      "ways": [
+        {
+          "direction": "east",
+          "from": "Beach room 1",
+          "to": "Beach room 2",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        },
+        {
+          "direction": "west",
+          "from": "Beach room 1",
+          "to": "Beach room 4",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        }
+      ],
+      "items": [],
+      "name": "Beach room 1",
+      "description": "the 1st beach room"
+    },
+    {
+      "ways": [
+        {
+          "direction": "west",
+          "from": "Beach room 4",
+          "to": "Cliff room 1",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        },
+        {
+          "direction": "east",
+          "from": "Beach room 4",
+          "to": "Beach room 1",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        },
+        {
+          "direction": "north",
+          "from": "Beach room 4",
+          "to": "Jungle room 4",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        }
+      ],
+      "items": [
+        {
+          "strength": 0,
+          "name": "fishing rod",
+          "description": "a fishing rod",
+          "where": "is lying on the sand"
+        }
+      ],
+      "name": "Beach room 4",
+      "description": "the 4th beach room"
+    },
+    {
+      "ways": [
+        {
+          "direction": "south",
+          "from": "Jungle room 4",
+          "to": "Beach room 4",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        },
+        {
+          "direction": "east",
+          "from": "Jungle room 4",
+          "to": "Jungle room 2",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        }
+      ],
+      "items": [],
+      "name": "Jungle room 4",
+      "description": "the 4th jungle room"
+    },
+    {
+      "ways": [
+        {
+          "direction": "north",
+          "from": "Jungle room 2",
+          "to": "Jungle room 1",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        },
+        {
+          "direction": "east",
+          "from": "Jungle room 2",
+          "to": "Jungle room 4",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        },
+        {
+          "direction": "west",
+          "from": "Jungle room 2",
+          "to": "Jungle room 3",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        }
+      ],
+      "items": [],
+      "name": "Jungle room 2",
+      "description": "the 2nd jungle room"
+    },
+    {
+      "ways": [
+        {
+          "direction": "south",
+          "from": "Jungle room 3",
+          "to": "Beach room 2",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        },
+        {
+          "direction": "west",
+          "from": "Jungle room 3",
+          "to": "Jungle room 2",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        }
+      ],
+      "items": [
+        {
+          "strength": 0,
+          "name": "berries",
+          "description": "suspicious red berries",
+          "where": "on a bush"
+        }
+      ],
+      "name": "Jungle room 3",
+      "description": "the 3rd jungle room"
+    },
+    {
+      "ways": [
+        {
+          "direction": "north",
+          "from": "Jungle room 1",
+          "to": "Village Center",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        },
+        {
+          "direction": "south",
+          "from": "Jungle room 1",
+          "to": "Jungle room 2",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        }
+      ],
+      "items": [],
+      "name": "Jungle room 1",
+      "description": "the 3rd jungle room"
+    },
+    {
+      "ways": [
+        {
+          "direction": "south",
+          "from": "Village Center",
+          "to": "Jungle room 1",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        },
+        {
+          "direction": "north",
+          "from": "Village Center",
+          "to": "Traders' Hut",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        },
+        {
+          "direction": "east",
+          "from": "Village Center",
+          "to": "Mystic Hut",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        },
+        {
+          "direction": "west",
+          "from": "Village Center",
+          "to": "Healers' Hut",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        }
+      ],
+      "items": [],
+      "name": "Village Center",
+      "description": "the village center"
+    },
+    {
+      "ways": [
+        {
+          "direction": "west",
+          "from": "Mystic Hut",
+          "to": "Village Center",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        }
+      ],
+      "items": [],
+      "name": "Mystic Hut",
+      "description": "a mystic hut"
+    },
+    {
+      "ways": [
+        {
+          "direction": "south",
+          "from": "Traders' Hut",
+          "to": "Village Center",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        }
+      ],
+      "items": [],
+      "name": "Traders' Hut",
+      "description": "the traders' hut"
+    },
+    {
+      "ways": [
+        {
+          "direction": "east",
+          "from": "Healers' Hut",
+          "to": "Village Center",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        },
+        {
+          "direction": "west",
+          "from": "Healers' Hut",
+          "to": "Cave entrance",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        }
+      ],
+      "items": [],
+      "name": "Healers' Hut",
+      "description": "the healers' hut"
+    },
+    {
+      "ways": [
+        {
+          "direction": "north",
+          "from": "Cave entrance",
+          "to": "Cave room 2",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        },{
+          "direction": "east",
+          "from": "Cave entrance",
+          "to": "Healers' Hut",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        },
+        {
+          "direction": "west",
+          "from": "Cave entrance",
+          "to": "Cliff room 2",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        }
+      ],
+      "items": [],
+      "name": "Cave entrance",
+      "description": "the entrance of a cave"
+    },
+    {
+      "ways": [
+        {
+          "direction": "south",
+          "from": "Cave room 2",
+          "to": "Cave entrance",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        },{
+          "direction": "east",
+          "from": "Cave room 2",
+          "to": "Cave room 3",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        },
+        {
+          "direction": "west",
+          "from": "Cave room 2",
+          "to": "Cave room 4",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        }
+      ],
+      "items": [],
+      "name": "Cave room 2",
+      "description": "the 2nd cave room"
+    },
+    {
+      "ways": [
+        {
+          "direction": "west",
+          "from": "Cave room 3",
+          "to": "Cave room 2",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        }
+      ],
+      "items": [],
+      "name": "Cave room 3",
+      "description": "the 3rd cave room"
+    },
+    {
+      "ways": [
+        {
+          "direction": "east",
+          "from": "Cave room 4",
+          "to": "Cave room 2",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        }
+      ],
+      "items": [],
+      "name": "Cave room 4",
+      "description": "the 4th cave room"
+    },
+    {
+      "ways": [
+        {
+          "direction": "north",
+          "from": "Cliff room 1",
+          "to": "Cliff room 2",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        },
+        {
+          "direction": "west",
+          "from": "Cliff room 1",
+          "to": "Beach room 4",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        }
+      ],
+      "items": [],
+      "name": "Cliff room 1",
+      "description": "the 1st cliff room"
+    },
+    {
+      "ways": [
+        {
+          "direction": "north",
+          "from": "Cliff room 2",
+          "to": "Cliff room 3",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        },
+        {
+          "direction": "south",
+          "from": "Cliff room 2",
+          "to": "Cliff room 1",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        },
+        {
+          "direction": "east",
+          "from": "Cliff room 2",
+          "to": "Cave entrance",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        }
+      ],
+      "items": [],
+      "name": "Cliff room 2",
+      "description": "the 2nd cliff room"
+    },
+    {
+      "ways": [
+        {
+          "direction": "south",
+          "from": "Cliff room 3",
+          "to": "Cliff room 2",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        },
+        {
+          "direction": "east",
+          "from": "Cliff room 3",
+          "to": "Beach room 1",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        },
+        {
+          "direction": "west",
+          "from": "Cliff room 3",
+          "to": "Cliff room 4",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        }
+      ],
+      "items": [],
+      "name": "Cliff room 3",
+      "description": "the 3rd cliff room"
+    },
+    {
+      "ways": [
+        {
+          "direction": "north",
+          "from": "Cliff room 4",
+          "to": "Cliff room 5",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        },
+        {
+          "direction": "east",
+          "from": "Cliff room 4",
+          "to": "Cliff room 3",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        }
+      ],
+      "items": [],
+      "name": "Cliff room 4",
+      "description": "the 4th cliff room"
+    },
+    {
+      "ways": [
+        {
+          "direction": "south",
+          "from": "Cliff room 5",
+          "to": "Cliff room 4",
+          "name": "a way",
+          "description": "it's a way. it goes somewhere."
+        }
+      ],
+      "items": [],
+      "name": "Cliff room 5",
+      "description": "the 5th cliff room"
     }
   ]
 }
