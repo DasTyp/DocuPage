@@ -23,6 +23,8 @@ public class Game
         Scanner userInput = new Scanner(System.in);
         this.player = player;
 
+        Map map; //Declaration of the Map
+
         System.out.println("welcome to the zork game.");
         Path path = Paths.get(Constants.SAVED_GAME);
         if(!Files.exists(path))
@@ -65,6 +67,10 @@ public class Game
                 Zork.saveGame(this);
             else if (input.matches("restore|load"))
                 Zork.loadGame(Constants.SAVED_GAME);
+            else if (input.matches("map")){
+                map=new Map(650,450,"MAP");
+                map.init();
+            }
             else
                 System.out.println("Unknown command.");
         }

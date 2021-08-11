@@ -28,7 +28,7 @@ public class Map extends Window{
      * Method init
      * It creates a JLabel, in which the image of the map is placed. Afterwards the label is added to the window.
      */
-    private void init(){
+    public void init(){
         JLabel map = new JLabel();
         map.setIcon(new ImageIcon(Constants.MAP));
         JPanel panel = new JPanel();
