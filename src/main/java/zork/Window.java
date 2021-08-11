@@ -17,6 +17,9 @@ public class Window extends JFrame {
      * @param titleOfWindow title of window
      */
     public Window(int width, int height, String titleOfWindow) {
+        if(width <=0 || height <= 0) {
+            throw new ArithmeticException("Width or Height of the Window is negative or zero");
+        }
         setLayout(null); //deactivate Layout-Manager to place window absolut
         setVisible(true);
         setSize(width, height);
