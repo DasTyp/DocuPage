@@ -45,10 +45,10 @@ public class Zork
     public static void loadGame(String jsonFile)
     {
         Path path = Paths.get(jsonFile);
-        if(!Files.exists(path))
+        if(!Files.exists(path)) {
             System.out.println("There's no saved game to load.");
-        else
-        {
+        }
+        else {
             game = Zork.parseData(jsonFile);
             game.play(game.player);
             System.out.println("Game loaded.");
