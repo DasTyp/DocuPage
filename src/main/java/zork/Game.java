@@ -68,8 +68,7 @@ public class Game
             else if (input.matches("restore|load"))
                 Zork.loadGame(Constants.SAVED_GAME);
             else if (input.matches("map")){
-                map=new Map(650,450,"MAP");
-                map.init();
+                map=new Map(650,450,"MAP", Constants.MAP);
             }
             else
                 System.out.println("Unknown command.");
