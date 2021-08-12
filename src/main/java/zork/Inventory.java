@@ -12,7 +12,9 @@ public class Inventory {
      * @param maxSize max amount of items the inventory can hold
      */
     Inventory(int maxSize){
-        if(maxSize < 1) throw new Error("inventory size must be greater than 0");
+        if(maxSize < 1){
+            throw new Error("inventory size must be greater than 0");
+        }
         this.maxSize = maxSize;
     }
 
@@ -24,10 +26,13 @@ public class Inventory {
      */
     public boolean addItem(Item item){
         if(storedItems.size() >= maxSize){
-            //System.out.println("not enough space in inventory");
+            System.out.println("not enough space in inventory");
             return false;
         }else{
             storedItems.add(item);
+            if(storedItems.size() >= maxSize){
+                System.out.println("your inventory is full now");
+            }
             return true;
         }
     }
@@ -49,7 +54,9 @@ public class Inventory {
      */
     public boolean removeItem(String name){
         for (Item i : storedItems){
-            if(i.getName().equals(name)) return storedItems.remove(i);
+            if(i.getName().equals(name)){
+                return storedItems.remove(i);
+            }
         }
         return false;
     }
@@ -62,7 +69,9 @@ public class Inventory {
      */
     public boolean hasItem(Item item){
         for (Item i : storedItems){
-            if(i == item) return true;
+            if(i == item){
+                return true;
+            }
         }
         return false;
     }
@@ -75,7 +84,9 @@ public class Inventory {
      */
     public boolean hasItem(String name){
         for (Item i : storedItems) {
-            if (i.getName().equals(name)) return true;
+            if (i.getName().equals(name)){
+                return true;
+            }
         }
         return false;
     }
@@ -86,12 +97,13 @@ public class Inventory {
      */
     public void show(){
         int itemCount = storedItems.size();
-        if(itemCount < 1) System.out.println("your inventory is empty");
+        if(itemCount < 1){
+            System.out.println("your inventory is empty");
+        }
         else{
             for(Item i : storedItems){
-                System.out.print(i.getName()+" ");
+                System.out.println(i.getName()+" ("+i.getDescription()+")");
             }
-            System.out.println();
         }
     }
 
