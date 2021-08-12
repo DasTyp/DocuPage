@@ -4,6 +4,16 @@ import com.google.gson.annotations.SerializedName;
 
 public class Player
 {
+    /**
+     * The players inventory
+     */
+    Inventory inventory;
+
+    /**
+     * The initial amount of items the player can carry in his inventory
+     */
+    int maxInventorySize = 10;
+
     @SerializedName("name")
     private String name = "Hugo";
     @SerializedName("points")
@@ -13,7 +23,9 @@ public class Player
     @SerializedName("where")
     private String where;
 
-    // Getters and setters for a player
+    Player() {
+        inventory = new Inventory(maxInventorySize);
+    }
 
     public int getPoints()
     {

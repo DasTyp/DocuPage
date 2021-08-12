@@ -14,6 +14,7 @@ import java.util.regex.Pattern;
 public class Game
 {
     Player player;
+
     @SerializedName("rooms")
     List<Room> rooms;
 
@@ -25,8 +26,9 @@ public class Game
 
         System.out.println("welcome to the zork game.");
         Path path = Paths.get(Constants.SAVED_GAME);
-        if(!Files.exists(path))
+        if(!Files.exists(path)) {
             System.out.println("if you want to load a saved game type 'load'.");
+        }
         System.out.println(getCurrentRoom());
         System.out.println(getCurrentRoom().getDescription());
 
@@ -35,49 +37,57 @@ public class Game
         {
             String input = userInput.nextLine();
 
-            if (input.matches("help|info"))
+            if (input.matches("help|info")) {
                 System.out.println("Available commands: " + Constants.COMMAND_LIST);
-            else if (input.equals("quit") || input.equals("exit"))
+            }
+            else if (input.matches("inventory|show inventory")) {
+                player.inventory.show();
+            }
+            else if (input.equals("quit") || input.equals("exit")) {
                 System.exit(0);
-            else if (input.matches("look|look (.+)"))
-            {
+            }
+            else if (input.matches("look|look (.+)")) {
                 Pattern p = Pattern.compile("look (.+)");
                 Matcher m = p.matcher(input);
-                if (m.find())
-                {
+                if (m.find()) {
                     look(m.group(1));
                 }
-                else
+                else {
                     System.out.println("You have to say where you want to look (around, north, south, east, west, up, down).");
+                }
             }
-            else if (input.matches("move|move (.+)"))
-            {
+            else if (input.matches("move|move (.+)")) {
                 Pattern p = Pattern.compile("move (.+)");
                 Matcher m = p.matcher(input);
-                if (m.find())
+                if (m.find()) {
                     move(m.group(1));
-                else
+                }
+                else {
                     System.out.println("You have to say where you want to move (north, south, east, west, up, down).");
+                }
             }
             else if (input.matches("take|take (.+)"))
             {
-                Pattern p = Pattern.compile("take (.+)");
-                Matcher m = p.matcher(input);
-                if (m.find())
-                {
-                    take(m.group(1));
+                if (input.matches("take (.+)")) {
+                    String itemName = input.replace("take ", "");
+                    take(itemName);
                 }
-                else
+                else {
                     System.out.println("You have to say what you want to take and add to your inventory.");
+                }
             }
-            else if (input.equals("?"))
+            else if (input.equals("?")) {
                 System.out.println(getCurrentRoom());
-            else if (input.equals("save"))
+            }
+            else if (input.equals("save")) {
                 Zork.saveGame(this);
-            else if (input.matches("restore|load"))
+            }
+            else if (input.matches("restore|load")) {
                 Zork.loadGame(Constants.SAVED_GAME);
-            else
+            }
+            else {
                 System.out.println("Unknown command.");
+            }
         }
     }
 
@@ -88,20 +98,19 @@ public class Game
         boolean isEachDirection = lookingAt.equals(Constants.EACH_DIRECTION);
 
         // Entered phrase is not "look around" and is not "look + valid direction"
-        if (!isProperInput(lookingAt, Constants.DIRECTIONS) && !isEachDirection)
+        if (!isProperInput(lookingAt, Constants.DIRECTIONS) && !isEachDirection) {
             System.out.println("no valid direction. please enter look north / south / west / east / up or down.");
-
+        }
         // The current room has no ways (actually this shouldn't happen as you have to enter the room somehow)
-        else if (!hasWays())
+        else if (!hasWays()) {
             System.out.println("you're stucked in a room. there's no way hiding there.");
-
+        }
         // Entered phrase is "look + valid direction" but there is no way in the chosen direction
-        else if (getWayForDirection(lookingAt) == null && !isEachDirection)
+        else if (getWayForDirection(lookingAt) == null && !isEachDirection) {
             System.out.println("there's nothing in the direction " + lookingAt + ".");
-
+        }
         // Entered phrase is "look around": show everything in the current room (ways, items)
-        else if (isEachDirection)
-        {
+        else if (isEachDirection) {
             //Show available ways in the current room
             for (Way way : getCurrentRoom().getRoomWayList())
             {
@@ -116,10 +125,8 @@ public class Game
                 }
             }
         }
-
         // Entered phrase is "look + valid direction": show way for the selected direction
-        else
-        {
+        else {
             Way resultWay = getWayForDirection(lookingAt);
             System.out.println("there is a " + resultWay.getName() + " going " + lookingAt + ".");
         }
@@ -128,14 +135,16 @@ public class Game
     // Move method: moves in the chosen direction if it's a valid direction and if there's a way in this direction
     public void move(String direction)
     {
-        if (!isProperInput(direction, Constants.DIRECTIONS))
+        if (!isProperInput(direction, Constants.DIRECTIONS)) {
             System.out.println("no valid direction. please enter move north / south / west / east / up or down.");
-        else if (!hasWays())
+        }
+        else if (!hasWays()) {
             System.out.println("you're stucked in a room. there's no way hiding there.");
-        else if (getWayForDirection(direction) == null)
+        }
+        else if (getWayForDirection(direction) == null) {
             System.out.println("you can't move in this direction.");
-        else
-        {
+        }
+        else {
             Way resultWay = getWayForDirection(direction);
             System.out.println("you're taking the " + resultWay.getName() + " " + direction + ". ");
             player.setRoomName(resultWay.getTo());
@@ -152,12 +161,13 @@ public class Game
     public void take(String itemName) {
         Item item = getItemFromCurrentRoom(itemName);
         if (item != null) {
-            if (player.inventory.addItem(item)) {
+            boolean itemAdded = player.inventory.addItem(item);
+            if (itemAdded) {
                 System.out.println("item \"" + item.getName() + "\" was successfully added to your inventory. ");
                 if (item.getState().equals("removable")) {
                     getCurrentRoom().getRoomItemList().remove(item);
                 } else {
-                    System.out.println("but there is still plenty of it around here. ");
+                    System.out.println("But there is still plenty of it around here. ");
                 }
             }
         }
@@ -185,19 +195,23 @@ public class Game
     // Helper method: Checks if a given string is contained in a given list
     private boolean isProperInput(String input, List<String> properInput)
     {
-        if (properInput.contains(input))
+        if (properInput.contains(input)) {
             return true;
-        else
+        }
+        else {
             return false;
+        }
     }
 
     // Helper method: Checks if the current room has ways
     private boolean hasWays()
     {
-        if (getCurrentRoom().getRoomWayList().size() == 0)
+        if (getCurrentRoom().getRoomWayList().size() == 0) {
             return false;
-        else
+        }
+        else {
             return true;
+        }
     }
 
     // Helper method: Returns the way in the given direction if available (otherwise the way is null)
@@ -221,8 +235,9 @@ public class Game
         Room currentRoom = null;
         for (Room r : rooms)
         {
-            if (r.getName().equals(player.getRoomName()))
+            if (r.getName().equals(player.getRoomName())) {
                 currentRoom = r;
+            }
         }
         return currentRoom;
     }

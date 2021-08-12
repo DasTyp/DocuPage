@@ -17,6 +17,7 @@ public class Constants {
                     "quit or exit",
                     "?",
                     "help or info",
+                    "inventory",
                     "take")
     );
 
