@@ -90,7 +90,7 @@ public class Game
 
         // The current room has no ways (actually this shouldn't happen as you have to enter the room somehow)
         else if (!hasWays())
-            System.out.println("you're stucked in a room. there's no way hiding there.");
+            System.out.println("you're stuck in a room. there's no way hiding there.");
 
         // Entered phrase is "look + valid direction" but there is no way in the chosen direction
         else if (getWayForDirection(lookingAt) == null && !isEachDirection)
@@ -131,7 +131,7 @@ public class Game
         if (!isProperInput(direction, Constants.DIRECTIONS))
             System.out.println("no valid direction. please enter move north / south / west / east / up or down.");
         else if (!hasWays())
-            System.out.println("you're stucked in a room. there's no way hiding there.");
+            System.out.println("you're stuck in a room. there's no way hiding there.");
         else if (getWayForDirection(direction) == null)
             System.out.println("you can't move in this direction.");
         else

@@ -3,15 +3,15 @@
     "points": 0,
     "strength": 100,
     "name": "hugo",
-    "where": "Beach room 1"
+    "where": "middle beach"
   },
   "rooms": [
     {
       "ways": [
         {
           "direction": "north",
-          "from": "Beach room 3",
-          "to": "Beach room 2",
+          "from": "island",
+          "to": "eastern beach",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         }
@@ -24,78 +24,71 @@
           "where": "is half way buried on the beach"
         }
       ],
-      "name": "Beach room 3",
+      "name": "island",
       "description": "the 3rd beach room"
     },
     {
       "ways": [
         {
           "direction": "north",
-          "from": "Beach room 2",
-          "to": "Jungle room 3",
+          "from": "eastern beach",
+          "to": "jungle glade",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         },
         {
           "direction": "south",
-          "from": "Beach room 2",
-          "to": "Beach room 3",
+          "from": "eastern beach",
+          "to": "island",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         },
         {
           "direction": "west",
-          "from": "Beach room 2",
-          "to": "Beach room 1",
+          "from": "eastern beach",
+          "to": "middle beach",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         }
       ],
       "items": [],
-      "name": "Beach room 2",
+      "name": "eastern beach",
       "description": "the 2nd beach room"
     },
     {
       "ways": [
         {
           "direction": "east",
-          "from": "Beach room 1",
-          "to": "Beach room 2",
+          "from": "middle beach",
+          "to": "eastern beach",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         },
         {
           "direction": "west",
-          "from": "Beach room 1",
-          "to": "Beach room 4",
+          "from": "middle beach",
+          "to": "western beach",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         }
       ],
       "items": [],
-      "name": "Beach room 1",
+      "name": "middle beach",
       "description": "the 1st beach room"
     },
     {
       "ways": [
         {
-          "direction": "west",
-          "from": "Beach room 4",
-          "to": "Cliff room 1",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
-        },
-        {
           "direction": "east",
-          "from": "Beach room 4",
-          "to": "Beach room 1",
+          "from": "western beach",
+          "to": "middle beach",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         },
         {
           "direction": "north",
-          "from": "Beach room 4",
-          "to": "Jungle room 4",
+          "from": "western beach",
+          "to": "palm forest",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         }
@@ -108,73 +101,80 @@
           "where": "is lying on the sand"
         }
       ],
-      "name": "Beach room 4",
+      "name": "western beach",
       "description": "the 4th beach room"
     },
     {
       "ways": [
         {
           "direction": "south",
-          "from": "Jungle room 4",
-          "to": "Beach room 4",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "from": "palm forest",
+          "to": "western beach",
+          "name": "sandy trail",
+          "description": "a wind swept trail leading to the beach."
         },
         {
           "direction": "east",
-          "from": "Jungle room 4",
-          "to": "Jungle room 2",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "from": "palm forest",
+          "to": "dense jungle",
+          "name": "a trail",
+          "description": "an animal trail leading towards the wilds."
+        },
+        {
+          "direction": "west",
+          "from": "palm forest",
+          "to": "cliff coast",
+          "name": "a gravel path",
+          "description": "at the end of this gravel path you can see the cliffs."
         }
       ],
       "items": [],
-      "name": "Jungle room 4",
-      "description": "the 4th jungle room"
+      "name": "palm forest",
+      "description": "A forest of shrubbery and palm trees. Watch out for thorns."
     },
     {
       "ways": [
         {
           "direction": "north",
-          "from": "Jungle room 2",
-          "to": "Jungle room 1",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "from": "dense jungle",
+          "to": "sparse jungle",
+          "name": "cleared path",
+          "description": "you can see footsteps on this path! There must be other people."
         },
         {
           "direction": "east",
-          "from": "Jungle room 2",
-          "to": "Jungle room 4",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "from": "dense jungle",
+          "to": "palm forest",
+          "name": "a trail",
+          "description": "an animal trail leading towards the ocean."
         },
         {
           "direction": "west",
-          "from": "Jungle room 2",
-          "to": "Jungle room 3",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "from": "dense jungle",
+          "to": "jungle glade",
+          "name": "an animal trail",
+          "description": "a well worn trail, it must have seen much use."
         }
       ],
       "items": [],
-      "name": "Jungle room 2",
-      "description": "the 2nd jungle room"
+      "name": "dense jungle",
+      "description": "there's barely any light reaching you through the dense canopy. You can hear animals in the distance."
     },
     {
       "ways": [
         {
           "direction": "south",
-          "from": "Jungle room 3",
-          "to": "Beach room 2",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "from": "jungle glade",
+          "to": "eastern beach",
+          "name": "a path",
+          "description": "it's barely visible, but you can make your way through the trees south."
         },
         {
           "direction": "west",
-          "from": "Jungle room 3",
-          "to": "Jungle room 2",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "from": "jungle glade",
+          "to": "dense jungle",
+          "name": "an animal trail",
+          "description": "a well worn trail, it must have seen much use."
         }
       ],
       "items": [
@@ -185,36 +185,36 @@
           "where": "on a bush"
         }
       ],
-      "name": "Jungle room 3",
-      "description": "the 3rd jungle room"
+      "name": "jungle glade",
+      "description": "a clearing in the jungle, full of life."
     },
     {
       "ways": [
         {
           "direction": "north",
-          "from": "Jungle room 1",
+          "from": "sparse jungle",
           "to": "Village Center",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "name": "a path",
+          "description": "a wandering path, you can spot human usage."
         },
         {
           "direction": "south",
-          "from": "Jungle room 1",
-          "to": "Jungle room 2",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "from": "sparse jungle",
+          "to": "dense jungle",
+          "name": "cleared path",
+          "description": "it's a path that has been hacked through the jungle."
         }
       ],
       "items": [],
-      "name": "Jungle room 1",
-      "description": "the 3rd jungle room"
+      "name": "sparse jungle",
+      "description": "the trees become smaller and less dense. In the distance you can hear drums."
     },
     {
       "ways": [
         {
           "direction": "south",
           "from": "Village Center",
-          "to": "Jungle room 1",
+          "to": "sparse jungle",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         },
@@ -298,7 +298,7 @@
         {
           "direction": "north",
           "from": "Cave entrance",
-          "to": "Cave room 2",
+          "to": "cave fork",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         },{
@@ -311,7 +311,7 @@
         {
           "direction": "west",
           "from": "Cave entrance",
-          "to": "Cliff room 2",
+          "to": "cliff wall",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         }
@@ -324,167 +324,167 @@
       "ways": [
         {
           "direction": "south",
-          "from": "Cave room 2",
+          "from": "cave fork",
           "to": "Cave entrance",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         },{
           "direction": "east",
-          "from": "Cave room 2",
-          "to": "Cave room 3",
+          "from": "cave fork",
+          "to": "treasure cave",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         },
         {
           "direction": "west",
-          "from": "Cave room 2",
-          "to": "Cave room 4",
+          "from": "cave fork",
+          "to": "boss cave",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         }
       ],
       "items": [],
-      "name": "Cave room 2",
+      "name": "cave fork",
       "description": "the 2nd cave room"
     },
     {
       "ways": [
         {
           "direction": "west",
-          "from": "Cave room 3",
-          "to": "Cave room 2",
+          "from": "treasure cave",
+          "to": "cave fork",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         }
       ],
       "items": [],
-      "name": "Cave room 3",
+      "name": "treasure cave",
       "description": "the 3rd cave room"
     },
     {
       "ways": [
         {
           "direction": "east",
-          "from": "Cave room 4",
-          "to": "Cave room 2",
+          "from": "boss cave",
+          "to": "cave fork",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         }
       ],
       "items": [],
-      "name": "Cave room 4",
+      "name": "boss cave",
       "description": "the 4th cave room"
     },
     {
       "ways": [
         {
           "direction": "north",
-          "from": "Cliff room 1",
-          "to": "Cliff room 2",
+          "from": "cliff coast",
+          "to": "cliff wall",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         },
         {
           "direction": "west",
-          "from": "Cliff room 1",
-          "to": "Beach room 4",
+          "from": "cliff coast",
+          "to": "palm forest",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         }
       ],
       "items": [],
-      "name": "Cliff room 1",
+      "name": "cliff coast",
       "description": "the 1st cliff room"
     },
     {
       "ways": [
         {
           "direction": "north",
-          "from": "Cliff room 2",
-          "to": "Cliff room 3",
+          "from": "cliff wall",
+          "to": "ape horde",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         },
         {
           "direction": "south",
-          "from": "Cliff room 2",
-          "to": "Cliff room 1",
+          "from": "cliff wall",
+          "to": "cliff coast",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         },
         {
           "direction": "east",
-          "from": "Cliff room 2",
+          "from": "cliff wall",
           "to": "Cave entrance",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         }
       ],
       "items": [],
-      "name": "Cliff room 2",
+      "name": "cliff wall",
       "description": "the 2nd cliff room"
     },
     {
       "ways": [
         {
           "direction": "south",
-          "from": "Cliff room 3",
-          "to": "Cliff room 2",
+          "from": "ape horde",
+          "to": "cliff wall",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         },
         {
           "direction": "east",
-          "from": "Cliff room 3",
-          "to": "Beach room 1",
+          "from": "ape horde",
+          "to": "middle beach",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         },
         {
           "direction": "west",
-          "from": "Cliff room 3",
-          "to": "Cliff room 4",
+          "from": "ape horde",
+          "to": "front of a wooden house",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         }
       ],
       "items": [],
-      "name": "Cliff room 3",
+      "name": "ape horde",
       "description": "the 3rd cliff room"
     },
     {
       "ways": [
         {
           "direction": "north",
-          "from": "Cliff room 4",
-          "to": "Cliff room 5",
+          "from": "front of a wooden house",
+          "to": "inside of a wooden house",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         },
         {
           "direction": "east",
-          "from": "Cliff room 4",
-          "to": "Cliff room 3",
+          "from": "front of a wooden house",
+          "to": "ape horde",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         }
       ],
       "items": [],
-      "name": "Cliff room 4",
+      "name": "front of a wooden house",
       "description": "the 4th cliff room"
     },
     {
       "ways": [
         {
           "direction": "south",
-          "from": "Cliff room 5",
-          "to": "Cliff room 4",
+          "from": "inside of a wooden house",
+          "to": "front of a wooden house",
           "name": "a way",
           "description": "it's a way. it goes somewhere."
         }
       ],
       "items": [],
-      "name": "Cliff room 5",
+      "name": "inside of a wooden house",
       "description": "the 5th cliff room"
     }
   ]

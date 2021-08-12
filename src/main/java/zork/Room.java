@@ -38,7 +38,7 @@ public class Room extends Thing
     @Override
     public String toString()
     {
-        return "you are in the room " + getName() + ".";
+        return "you are in the " + getName() + ".";
     }
 
     public List<Way> getRoomWayList()
