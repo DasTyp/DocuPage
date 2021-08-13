@@ -3,7 +3,11 @@
     "points": 0,
     "strength": 100,
     "name": "hugo",
-    "where": "middle beach"
+    "where": "middle beach",
+    "inventory" : {
+      "maxSize" : 10,
+      "storedItems" : []
+    }
   },
   "rooms": [
     {
