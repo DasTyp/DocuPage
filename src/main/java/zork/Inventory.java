@@ -1,10 +1,14 @@
 package zork;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.ArrayList;
 
 public class Inventory {
 
+    @SerializedName("maxSize")
     private int maxSize;
+    @SerializedName("storedItems")
     private ArrayList<Item> storedItems = new ArrayList<>();
 
     /**
