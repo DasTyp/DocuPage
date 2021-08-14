@@ -16,20 +16,35 @@
           "direction": "north",
           "from": "island",
           "to": "eastern beach",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "name": "way through shallow water to the main island",
+          "description": "The water is shallow enough to wade through, but a great white shark is swimming here. "
         }
       ],
       "items": [
         {
           "strength": 0,
           "name": "a machete",
-          "description": "a blunt machete",
-          "where": "is half way buried on the beach"
+          "description": "big and sharp enough to be used as a weapon",
+          "where": "is stuck in a pile of stones",
+          "state" : "removable"
+        },
+        {
+          "strength": 0,
+          "name": "a sea shell",
+          "description": "looking so beautiful, it's almost mystic",
+          "where": "is half way buried on the beach",
+          "state" : "removable"
+        },
+        {
+          "strength": 2,
+          "name": "fish",
+          "description": "looks fresh and edible",
+          "where": "are swimming in the shallow water",
+          "state" : "fixed"
         }
       ],
       "name": "island",
-      "description": "the 3rd beach room"
+      "description": "a tiny island with a small jungle in the middle and beach around it. There are some fish swimming in the eastern ocean.\nUnfortunately the great white shark is back in the shallow water between the main island and this little one.\nSeems to be his favourite place..."
     },
     {
       "ways": [
@@ -37,27 +52,27 @@
           "direction": "north",
           "from": "eastern beach",
           "to": "jungle glade",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "name": "path into the jungle",
+          "description": "The path seems to lead somewhere, but a crocodile is lying on it. It's huge and looks kinda hungry, you can't take that way as long as it lies there."
         },
         {
           "direction": "south",
           "from": "eastern beach",
           "to": "island",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "name": "way through shallow water to the tiny island",
+          "description": "The water is shallow enough to wade through, but a great white shark is swimming here. "
         },
         {
           "direction": "west",
           "from": "eastern beach",
           "to": "middle beach",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "name": "sandy way",
+          "description": "a sandy way to middle beach."
         }
       ],
       "items": [],
       "name": "eastern beach",
-      "description": "the 2nd beach room"
+      "description": "a flat sandy beach continuing to east with dense jungle in the north and flooted mangroves in the west.\nIn the south lies a tiny island across the shallow ocean with a shiny, metallic looking object on it.\nA great white shark draws its circles there, it doesn't seem like it's going to move away.\nThere's a path into the jungle, but something big is lying in the shadows there.."
     },
     {
       "ways": [
@@ -65,20 +80,35 @@
           "direction": "east",
           "from": "middle beach",
           "to": "eastern beach",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "name": "sandy way",
+          "description": "a sandy way to eastern beach."
         },
         {
           "direction": "west",
           "from": "middle beach",
           "to": "western beach",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "name": "sandy way",
+          "description": "a sandy way to western beach."
         }
       ],
-      "items": [],
+      "items": [
+        {
+          "strength": 1,
+          "name": "fish",
+          "description": "looks fresh and edible",
+          "where": "are swimming in the shallow water",
+          "state" : "fixed"
+        },
+        {
+          "strength": 1,
+          "name": "a coconut",
+          "description": "eat raw or cook in meal?",
+          "where": "is hanging on a coconut palm",
+          "state" : "fixed"
+        }
+      ],
       "name": "middle beach",
-      "description": "the 1st beach room"
+      "description": "a long, flat sandy beach continuing to east and west with dense jungle and some palms in the north. \nTo the south lies the endless sea with large schools of fish in the shallow water"
     },
     {
       "ways": [
@@ -86,27 +116,28 @@
           "direction": "east",
           "from": "western beach",
           "to": "middle beach",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "name": "sandy way",
+          "description": "a sandy way to middle beach."
         },
         {
           "direction": "north",
           "from": "western beach",
           "to": "palm forest",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "name": "sandy trail",
+          "description": "a wind swept trail leading into the palm forest. It's overgrown with dense thorny bushes,\nthere's definitely no way through this without getting seriously hurt."
         }
       ],
       "items": [
         {
           "strength": 0,
-          "name": "fishing rod",
-          "description": "a fishing rod",
-          "where": "is lying on the sand"
+          "name": "a fishing rod",
+          "description": "can be used to catch fish",
+          "where": "is lying on the sand",
+          "state" : "removable"
         }
       ],
       "name": "western beach",
-      "description": "the 4th beach room"
+      "description": "a long, flat sandy beach continuing to the east with dense palm forest in the north and high cliffs to the west. \nA small sandy trail seems to lead into the forest, but it's overgrown with thorny bushes. A wide river separates beach and cliffs.\nThe front half of the broken plane is hanging on the cliffs. It looks almost unharmed, like there could be intact technical devices in there.\nThe pilot surely owned a mobile two-way radio for emergency reasons.."
     },
     {
       "ways": [
