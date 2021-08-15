@@ -334,26 +334,27 @@
           "direction": "north",
           "from": "Cave entrance",
           "to": "cave fork",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
-        },{
+          "name": "small cave passage",
+          "description": "It is a small, pretty dark passage, guarded by a big and poisonous snake, which I can not fight agains, because it is to strong. "
+        },
+        {
           "direction": "east",
           "from": "Cave entrance",
           "to": "Healers' Hut",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "name": "a small path",
+          "description": "It is a small path. In the distance I can see a village."
         },
         {
           "direction": "west",
           "from": "Cave entrance",
           "to": "cliff wall",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "name": "rocky path",
+          "description": "It is a rocky path along the cliff."
         }
       ],
       "items": [],
       "name": "Cave entrance",
-      "description": "the entrance of a cave"
+      "description": "It is a clearing in front of the cliffs. You can see a dark passage, which seems to lead in a cave."
     },
     {
       "ways": [
@@ -361,26 +362,37 @@
           "direction": "south",
           "from": "cave fork",
           "to": "Cave entrance",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
-        },{
+          "name": "small cave passage",
+          "description": "It is a small, pretty dark passage, leading outside of the cave. The snake is still distracted."
+        },
+        {
           "direction": "east",
           "from": "cave fork",
           "to": "treasure cave",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "name": "closed door",
+          "description": "There is a closed door. But it doesn´t look very stable..."
         },
         {
           "direction": "west",
           "from": "cave fork",
           "to": "boss cave",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "enable": "has cairn",
+          "name": "a small passage",
+          "description": "Small passage, which leads deeper in the cave. Hopefully it will not break in."
         }
       ],
-      "items": [],
+      "items": [
+        {
+          "strength": 0,
+          "name": "cairn",
+          "description": "A lot of stones.",
+          "where": "at the edge of the room",
+          "state" : "removable",
+          "enable" : "has pickaxe"
+        }
+      ],
       "name": "cave fork",
-      "description": "the 2nd cave room"
+      "description": "The cave splits in two ways."
     },
     {
       "ways": [
@@ -388,13 +400,22 @@
           "direction": "west",
           "from": "treasure cave",
           "to": "cave fork",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "name": "open door",
+          "description": "The old door is open now."
         }
       ],
-      "items": [],
+      "items": [
+        {
+          "strength": 0,
+          "name": "mushroom",
+          "description": "A big red mushroom. It seems poisonous.",
+          "where": "at the edge of the room",
+          "state" : "removable"
+        }
+      ],
       "name": "treasure cave",
-      "description": "the 3rd cave room"
+      "enable" : "on machete",
+      "description": "There are a lot of cobwebs all around. I can barely see anything."
     },
     {
       "ways": [
@@ -402,13 +423,21 @@
           "direction": "east",
           "from": "boss cave",
           "to": "cave fork",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "name": "a small passage",
+          "description": "Small passage, which leads out of the cave. Hopefully it will not break in."
         }
       ],
-      "items": [],
+      "items": [
+        {
+          "strength": 10,
+          "name": "bear",
+          "description": "A big bear with the two-way radio.",
+          "where": "center of the room",
+          "state" : "removable"
+        }
+      ],
       "name": "boss cave",
-      "description": "the 4th cave room"
+      "description": "There is a big bear in this room. The bear holds a two-way radio in his hands. I need to fight him to get it."
     },
     {
       "ways": [
