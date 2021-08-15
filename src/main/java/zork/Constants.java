@@ -19,4 +19,5 @@ public class Constants
     // Location of the jsons for a new or a saved game
     public static final String SAVED_GAME = "files/savedGame.json";
     public static final String NEW_GAME ="files/database.json";
+    public static final String TEST_DATA ="files/testData.json";
 }
