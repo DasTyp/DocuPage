@@ -94,6 +94,7 @@ public class Game
 
         // Entered phrase is "look + valid direction" but there is no way in the chosen direction
         else if (getWayForDirection(lookingAt) == null && !isEachDirection)
+
             System.out.println("there's nothing in the direction " + lookingAt + ".");
 
         // Entered phrase is "look around": show everything in the current room (ways, items)
@@ -102,7 +103,7 @@ public class Game
             //Show available ways in the current room
             for (Way way : getCurrentRoom().getRoomWayList())
             {
-                System.out.println("there is a " + way.getName() + " going " + way.getDirection() + ". ");
+                System.out.println("there is a " + way.getName() + " going " + way.getDirection() + ". " + way.getDescription());
             }
             //Show available items in the current room
             if (getCurrentRoom().getRoomItemList() != null)
@@ -118,7 +119,7 @@ public class Game
         else
         {
             Way resultWay = getWayForDirection(lookingAt);
-            System.out.println("there is a " + resultWay.getName() + " going " + lookingAt + ".");
+            System.out.println("there is a " + resultWay.getName() + " going " + lookingAt + ". " + resultWay.getDescription());
         }
     }
 
