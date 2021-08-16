@@ -10,7 +10,7 @@ import java.util.List;
 public class Constants
 {
     /**
-     * Constans for the possible directions in the game
+     * Constants for the possible directions in the game
      */
     public static final List<String> DIRECTIONS = new ArrayList<>(Arrays.asList("north", "east", "west", "south", "up", "down"));
     public static final String EACH_DIRECTION = "around";
@@ -23,12 +23,12 @@ public class Constants
     );
 
     /**
-     * Location of the jsons for a saved game
+     * Location of the json for a saved game
      */
     public static final String SAVED_GAME = "files/savedGame.json";
 
     /**
-     * Location of the jsons for a new game
+     * Location of the json for a new game
      */
     public static final String NEW_GAME ="files/database.json";
 }

@@ -24,8 +24,8 @@ public class Room extends Thing
 
     /**
      * Constructor for a room object - calls the super constructor of the parent (thing) and adds the room-specific variables
-     * @param name
-     * @param description
+     * @param name the rooms name
+     * @param description thee rooms description
      */
     public Room(String name, String description)
     {

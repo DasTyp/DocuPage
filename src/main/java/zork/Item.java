@@ -27,11 +27,11 @@ public class Item extends Thing
 
     /**
      * Constructor for an item - calls the super constructor of the parent (thing) and adds the item-specific variables
-     * @param name
-     * @param description
-     * @param state
-     * @param strength
-     * @param where
+     * @param name the items name
+     * @param description the items description
+     * @param state the items state (fixed/removable)
+     * @param strength the items strength
+     * @param where the items position
      */
     public Item(String name, String description, String state, int strength, String where)
     {
