@@ -136,7 +136,7 @@
           "direction": "north",
           "from": "western beach",
           "to": "palm forest",
-          "name": "sandy trail",
+          "name": "sandy trail into the palm forest",
           "description": "It's a wind swept trail leading into the palm forest. It's overgrown with dense thorny bushes,\nthere's definitely no way through this without getting seriously hurt.",
           "isFree" : false
         }

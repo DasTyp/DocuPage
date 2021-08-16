@@ -135,6 +135,9 @@ public class Game
             System.out.println("you're stuck in a room. there's no way hiding there.");
         else if (getWayForDirection(direction) == null)
             System.out.println("you can't move in this direction.");
+        else if (!getWayForDirection(direction).isFree()) {
+            System.out.println("The " + getWayForDirection(direction).getName() + " is currently blocked, you can't move in this direction until you find a way to unlock it. " + getWayForDirection(direction).getDescription());
+        }
         else
         {
             Way resultWay = getWayForDirection(direction);
