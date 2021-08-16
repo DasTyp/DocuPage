@@ -250,34 +250,34 @@
           "direction": "south",
           "from": "Village Center",
           "to": "sparse jungle",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "name": "path back to the jungle",
+          "description": "a wandering path, you can spot human usage"
         },
         {
           "direction": "north",
           "from": "Village Center",
           "to": "Traders' Hut",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "name": "entrance to the traders' hut",
+          "description": "a door that leads to the inside of a hut, which looks like a kind of market"
         },
         {
           "direction": "east",
           "from": "Village Center",
           "to": "Mystic Hut",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "name": "entrance to a mysterious looking hut",
+          "description": "a door which is decorated with bones and skulls and greenish smoke rises from the mysterious black hut"
         },
         {
           "direction": "west",
           "from": "Village Center",
           "to": "Healers' Hut",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "name": "entrance to the healers' hut",
+          "description": "a door into a large hut which seems to belong to the healer"
         }
       ],
       "items": [],
       "name": "Village Center",
-      "description": "the village center"
+      "description": "a large place between three huts. In the middle there is a campfire with a large cauldron for cooking.\nSpread around the place are some locals who look at you skeptically."
     },
     {
       "ways": [
@@ -285,13 +285,13 @@
           "direction": "west",
           "from": "Mystic Hut",
           "to": "Village Center",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "name": "exit to the village center",
+          "description": "a doorway decorated with bones leading back to the village center"
         }
       ],
       "items": [],
       "name": "Mystic Hut",
-      "description": "a mystic hut"
+      "description": "a dark hut, lit only by the flickering of a greenish campfire. Bones hang from the ceiling.\nA resident of the village drums and sings fanatically. Perhaps it is a ritual?\nAround the fire lie various objects: fish bones, a starfish, seaweed and a pile of sand. It seems there is room for one more object.."
     },
     {
       "ways": [
@@ -299,13 +299,13 @@
           "direction": "south",
           "from": "Traders' Hut",
           "to": "Village Center",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "name": "guarded doorway back to the village center",
+          "description": "next to the door are two residents armed with a spear. So you should not try to steal here"
         }
       ],
       "items": [],
       "name": "Traders' Hut",
-      "description": "the traders' hut"
+      "description": "a spacious hut with a trader standing behind a counter.\nThe entire room is filled with treasures, such as weapons, masks or jewelry"
     },
     {
       "ways": [
@@ -313,20 +313,35 @@
           "direction": "east",
           "from": "Healers' Hut",
           "to": "Village Center",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "name": "exit door to the village center",
+          "description": "a wide door closed by curtains"
         },
         {
           "direction": "west",
           "from": "Healers' Hut",
           "to": "Cave entrance",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "name": "a secret hatch leading into the cave",
+          "description": "a hatch is hidden behind a curtain, which leads into a cave"
         }
       ],
-      "items": [],
+      "items": [
+        {
+          "strength": 0,
+          "name": "handwritten recipe",
+          "description": "a handwritten, bloody note containing a recipe for a potion",
+          "where": "on a stool next to the stretcher with the injured person",
+          "state": "removable"
+        },
+        {
+          "strength": 0,
+          "name": "empty jar",
+          "description": "an empty jar made of scratched glass",
+          "where": "on a shelf next to many colorful filled jars",
+          "state": "removable"
+        }
+      ],
       "name": "Healers' Hut",
-      "description": "the healers' hut"
+      "description": "a narrow hut with a stretcher in the center.\nA wounded man lies on the stretcher. Next to the person is a concerned resident who is treating the wounds.\nAll around him are shelves with jars containing colored liquids"
     },
     {
       "ways": [
