@@ -382,26 +382,31 @@
           "from": "Cave entrance",
           "to": "cave fork",
           "name": "small cave passage",
-          "description": "It is a small, pretty dark passage, guarded by a big and poisonous snake, which I can not fight agains, because it is to strong. "
+          "description": "It is a small, pretty dark passage, guarded by a big and poisonous snake, which I can not fight agains, because it is to strong.",
+          "altdescription": "It is a small pretty dark passage. The snake is still distracted",
+          "isFree": false
         },
         {
           "direction": "east",
           "from": "Cave entrance",
           "to": "Healers' Hut",
           "name": "a small path",
-          "description": "It is a small path. In the distance I can see a village."
+          "description": "It is a small path. In the distance I can see a village.",
+          "isFree": true
         },
         {
           "direction": "west",
           "from": "Cave entrance",
           "to": "cliff wall",
           "name": "rocky path",
-          "description": "It is a rocky path along the cliff."
+          "description": "It is a rocky path along the cliff.",
+          "isFree": true
         }
       ],
       "items": [],
       "name": "Cave entrance",
-      "description": "It is a clearing in front of the cliffs. You can see a dark passage, which seems to lead in a cave."
+      "description": "It is a clearing in front of the cliffs. You can see a dark passage, which seems to lead in a cave.",
+      "visited": 0
     },
     {
       "ways": [
@@ -410,22 +415,25 @@
           "from": "cave fork",
           "to": "Cave entrance",
           "name": "small cave passage",
-          "description": "It is a small, pretty dark passage, leading outside of the cave. The snake is still distracted."
+          "description": "It is a small, pretty dark passage, leading outside of the cave.",
+          "isFree": true
         },
         {
           "direction": "east",
           "from": "cave fork",
           "to": "treasure cave",
-          "name": "closed door",
-          "description": "There is a closed door. But it doesn´t look very stable..."
+          "name": "wooden door",
+          "description": "There is a closed door. But it doesn´t look very stable...",
+          "altdescription": "There is an open door",
+          "isFree": false
         },
         {
           "direction": "west",
           "from": "cave fork",
           "to": "boss cave",
-          "enable": "has cairn",
           "name": "a small passage",
-          "description": "Small passage, which leads deeper in the cave. Hopefully it will not break in."
+          "description": "Small passage, which leads deeper in the cave. Hopefully it will not break in.",
+          "isFree": false
         }
       ],
       "items": [
@@ -439,7 +447,8 @@
         }
       ],
       "name": "cave fork",
-      "description": "The cave splits in two ways."
+      "description": "The cave splits in two ways.",
+      "visited": 0
     },
     {
       "ways": [
@@ -447,8 +456,9 @@
           "direction": "west",
           "from": "treasure cave",
           "to": "cave fork",
-          "name": "open door",
-          "description": "The old door is open now."
+          "name": "wooden door",
+          "description": "The wooden door is open now.",
+          "isFree": true
         }
       ],
       "items": [
@@ -462,7 +472,8 @@
       ],
       "name": "treasure cave",
       "enable" : "on machete",
-      "description": "There are a lot of cobwebs all around. I can barely see anything."
+      "description": "There are a lot of cobwebs all around. I can barely see anything.",
+      "visited": 0
     },
     {
       "ways": [
@@ -471,7 +482,8 @@
           "from": "boss cave",
           "to": "cave fork",
           "name": "a small passage",
-          "description": "Small passage, which leads out of the cave. Hopefully it will not break in."
+          "description": "Small passage, which leads out of the cave. Hopefully it will not break in.",
+          "isFree": true
         }
       ],
       "items": [
@@ -484,7 +496,8 @@
         }
       ],
       "name": "boss cave",
-      "description": "There is a big bear in this room. The bear holds a two-way radio in his hands. I need to fight him to get it."
+      "description": "There is a big bear in this room. The bear holds a two-way radio in his hands. I need to fight him to get it.",
+      "visited": 0
     },
     {
       "ways": [

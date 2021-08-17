@@ -12,6 +12,10 @@ abstract class Thing
     @SerializedName("description")
     private String description;
 
+    /**
+     * @param name the things name
+     * @param description the things description
+     */
     public Thing(String name, String description)
     {
         this.name = name;

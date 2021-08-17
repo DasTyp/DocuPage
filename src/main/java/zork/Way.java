@@ -33,12 +33,12 @@ public class Way extends Thing {
     /**
      * Constructor for a way object - calls the super constructor of the parent (thing) and adds the way-specific variables
      *
-     * @param name
-     * @param description
-     * @param direction
-     * @param from
-     * @param to
-     * @param isFree
+     * @param name the ways name
+     * @param description the ways description
+     * @param direction the ways direction
+     * @param from room name from where the way starts
+     * @param to room name where the way leads to
+     * @param isFree displays if way is free or blocked (true/false)
      */
     public Way(String name, String description, String direction, String from, String to, boolean isFree) {
         super(name, description);

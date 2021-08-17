@@ -21,7 +21,7 @@ public class Game
 
     /**
      * Main playing method with the possible commands and their method call
-     * @param player
+     * @param player the current player in the game
      */
     public void play(Player player)
     {
@@ -77,7 +77,7 @@ public class Game
 
     /**
      * Look method: shows for the current room: all available items and all available ways
-     * @param lookingAt
+     * @param lookingAt what the player is looking at
      */
     public void look(String lookingAt)
     {
@@ -125,7 +125,7 @@ public class Game
 
     /**
      * Move method: moves in the chosen direction if it's a valid direction and if there's a way in this direction
-     * @param direction
+     * @param direction the direction the player wants to move
      */
     public void move(String direction)
     {
@@ -143,14 +143,19 @@ public class Game
             Way resultWay = getWayForDirection(direction);
             System.out.println("you're taking the " + resultWay.getName() + " " + direction + ". ");
             player.setRoomName(resultWay.getTo());
-            System.out.println(getCurrentRoom() + " It's " + getCurrentRoom().getDescription() + ".");
+            Room resultRoom = getCurrentRoom();
+            System.out.println(resultRoom + " It's " + resultRoom.getDescription() + ".");
+            resultRoom.incrementVisited();
+            if (resultRoom.getVisited() == 1) {
+                resultRoom.useAltDescription();
+            }
         }
     }
 
     /**
      * Helper method: Checks if a given string is contained in a given list
-     * @param input
-     * @param properInput
+     * @param input given input that has to be checked if it's proper
+     * @param properInput all proper input
      */
     private boolean isProperInput(String input, List<String> properInput)
     {
@@ -173,7 +178,7 @@ public class Game
 
     /**
      * Helper method: Returns the way in the given direction if available (otherwise the way is null)
-     * @param direction
+     * @param direction given direction for looking for ways
      */
     private Way getWayForDirection(String direction)
     {

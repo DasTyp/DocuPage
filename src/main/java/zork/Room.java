@@ -8,8 +8,19 @@ import java.util.List;
 /**
  * Rooms can be entered and left via ways and they can contain things and items
  */
-public class Room extends Thing
-{
+public class Room extends Thing {
+    /**
+     * Counter for room visits
+     */
+    @SerializedName("visited")
+    private int visited = 0;
+
+    /**
+     * Description will change to altDescription after the first visit
+     */
+    @SerializedName("altDescription")
+    private String altDescription = "";
+
     /**
      * Ways into or out of the room
      */
@@ -24,11 +35,11 @@ public class Room extends Thing
 
     /**
      * Constructor for a room object - calls the super constructor of the parent (thing) and adds the room-specific variables
-     * @param name
-     * @param description
+     *
+     * @param name        the rooms name
+     * @param description thee rooms description
      */
-    public Room(String name, String description)
-    {
+    public Room(String name, String description) {
         super(name, description);
     }
 
@@ -36,18 +47,45 @@ public class Room extends Thing
      * Method simplifies the default output for a room object
      */
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "you are in the " + getName() + ".";
     }
 
-    public List<Way> getRoomWayList()
-    {
+    public int getVisited() {
+        return visited;
+    }
+
+    public String getAltDescription() {
+        return altDescription;
+    }
+
+    public void setAltDescription(String altDescription) {
+        this.altDescription = altDescription;
+    }
+
+    public List<Way> getRoomWayList() {
         return roomWayList;
     }
 
-    public List<Item> getRoomItemList()
-    {
+    public List<Item> getRoomItemList() {
         return roomItemList;
+    }
+
+    /**
+     * Increments visited counter by one
+     * @author Yvonne Rahnfeld
+     */
+    public void incrementVisited() {
+        visited++;
+    }
+
+    /**
+     * Set altDescription is description if it's defined (not empty String)
+     * @author Yvonne Rahnfeld
+     */
+    public void useAltDescription() {
+        if (!getAltDescription().equals("")) {
+            setDescription(getAltDescription());
+        }
     }
 }
