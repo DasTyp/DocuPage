@@ -1,7 +1,7 @@
 package zork;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -16,6 +16,7 @@ public class GameTest {
      * @author Yvonne Rahnfeld
      */
     @Test
+    @DisplayName("Take, case: item's in room, inventory isn't full, item's removable → item's in inventory and has left room")
     public void testTake_ItemExistsInRoomInventoryNotFullItemIsRemovable_ItemInInventoryItemLeftRoom()
     {
         String itemName = "key";
@@ -34,6 +35,7 @@ public class GameTest {
      * @author Yvonne Rahnfeld
      */
     @Test
+    @DisplayName("Take, case: item's in room, inventory isn't full, item's fixed → item's in inventory and is still in room")
     public void testTake_ItemExistsInRoomInventoryNotFullItemIsFixed_ItemInInventoryItemStillInRoom()
     {
         String itemName = "berry";
@@ -52,6 +54,7 @@ public class GameTest {
      * @author Yvonne Rahnfeld
      */
     @Test
+    @DisplayName("Take, case: item's in room, inventory's full → item isn't in inventory and is still in room")
     public void testTake_ItemExistsInRoomInventoryFull_ItemNotInInventoryItemStillInRoom()
     {
         String itemName = "key";
@@ -74,6 +77,7 @@ public class GameTest {
      * @author Yvonne Rahnfeld
      */
     @Test
+    @DisplayName("Take, case: item isn't in room, inventory isn't full → item isn't in inventory and is still not in room")
     public void testTake_ItemNotInRoomInventoryNotFull_ItemNotInInventoryItemStillNotInRoom()
     {
         String itemName = "key";
