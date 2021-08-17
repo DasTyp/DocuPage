@@ -1,6 +1,7 @@
 package zork;
 
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * This class creates the window with a picture of the map
@@ -13,7 +14,7 @@ public class Map extends Window {
 
     /**
      * Contructor of class Map
-     * It calls the Constructor of Window and sets the variables width and height
+     * It calls the Constructor of Window and sets position to the middle of the screen, adds the image and the size of the window
      *
      * @param width         width of the window and the map
      * @param height        height of the window and the map
@@ -28,7 +29,10 @@ public class Map extends Window {
         map.setIcon(new ImageIcon(mapPath));
         panel.add(map);
         panel.setBounds(0, 0, width, height);
+        panel.setPreferredSize(new Dimension(width,height));
         this.add(panel);
+        this.pack();
+        setLocationRelativeTo(null); //Window will appear in the middle of tge screen
         revalidate();
     }
 }

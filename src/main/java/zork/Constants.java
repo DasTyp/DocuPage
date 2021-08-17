@@ -21,7 +21,9 @@ public class Constants
     public static final String NEW_GAME ="files/database.json";
 
     /**
-     * Location of image of the map
+     * Location and size of image of the map
      */
-    public static final String MAP ="files/test.jpeg";
+    public static final String MAP ="files/map.PNG";
+    public static final int MAP_WIDTH = 1682;
+    public static final int MAP_HEIGHT = 941;
 }
