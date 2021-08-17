@@ -143,7 +143,12 @@ public class Game
             Way resultWay = getWayForDirection(direction);
             System.out.println("you're taking the " + resultWay.getName() + " " + direction + ". ");
             player.setRoomName(resultWay.getTo());
-            System.out.println(getCurrentRoom() + " It's " + getCurrentRoom().getDescription() + ".");
+            Room resultRoom = getCurrentRoom();
+            System.out.println(resultRoom + " It's " + resultRoom.getDescription() + ".");
+            resultRoom.incrementVisited();
+            if (resultRoom.getVisited() == 1) {
+                resultRoom.useAltDescription();
+            }
         }
     }
 
