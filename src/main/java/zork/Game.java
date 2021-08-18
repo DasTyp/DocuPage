@@ -66,6 +66,16 @@ public class Game
                     System.out.println("You have to say where you want to move (north, south, east, west, up, down).");
                 }
             }
+            else if (input.matches("take|take (.+)"))
+            {
+                if (input.matches("take (.+)")) {
+                    String itemName = input.replace("take ", "");
+                    take(itemName);
+                }
+                else {
+                    System.out.println("You have to say what you want to take and add to your inventory.");
+                }
+            }
             else if (input.equals("?")) {
                 System.out.println(getCurrentRoom());
             }
@@ -140,6 +150,46 @@ public class Game
             player.setRoomName(resultWay.getTo());
             System.out.println(getCurrentRoom() + " It's " + getCurrentRoom().getDescription() + ".");
         }
+    }
+
+    /**
+     * adds item to the players inventory if an item with given name exists in current room and inventory isn't full,
+     * if the item is removable it will be removed from current room
+     * @author Yvonne Rahnfeld
+     * @param itemName from item to take, from user input
+     */
+    public void take(String itemName) {
+        Item item = getItemFromCurrentRoom(itemName);
+        if (item != null) {
+            boolean itemAdded = player.inventory.addItem(item);
+            if (itemAdded) {
+                System.out.println("item \"" + item.getName() + "\" was successfully added to your inventory. ");
+                if (item.getState().equals("removable")) {
+                    getCurrentRoom().getRoomItemList().remove(item);
+                } else {
+                    System.out.println("But there is still plenty of it around here. ");
+                }
+            }
+        }
+        else {
+            System.out.println("the thing \"" + itemName + "\" you want to take is not an item around here. ");
+        }
+    }
+
+    /**
+     * @author Yvonne Rahnfeld
+     * @param itemName from item to look for in current room, from user input
+     * @return searched item if it is in current room
+     */
+    private Item getItemFromCurrentRoom(String itemName) {
+        Item foundItem = null;
+        List<Item> roomItems = getCurrentRoom().getRoomItemList();
+        for (Item item: roomItems) {
+            if (item.getName().equals(itemName)) {
+                foundItem =  item;
+            }
+        }
+        return foundItem;
     }
 
     // Helper method: Checks if a given string is contained in a given list
