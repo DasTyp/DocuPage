@@ -78,14 +78,4 @@ public class Room extends Thing {
     public void incrementVisited() {
         visited++;
     }
-
-    /**
-     * Set altDescription is description if it's defined (not empty String)
-     * @author Yvonne Rahnfeld
-     */
-    public void useAltDescription() {
-        if (!getAltDescription().equals("")) {
-            setDescription(getAltDescription());
-        }
-    }
 }

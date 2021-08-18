@@ -144,11 +144,12 @@ public class Game
             System.out.println("you're taking the " + resultWay.getName() + " " + direction + ". ");
             player.setRoomName(resultWay.getTo());
             Room resultRoom = getCurrentRoom();
-            System.out.println(resultRoom + " It's " + resultRoom.getDescription() + ".");
-            resultRoom.incrementVisited();
-            if (resultRoom.getVisited() == 1) {
-                resultRoom.useAltDescription();
+            String description = resultRoom.getDescription();
+            if (resultRoom.getVisited() >= 1) {
+                description = resultRoom.getAltDescription();
             }
+            System.out.println(resultRoom + " It's " + description + ".");
+            resultRoom.incrementVisited();
         }
     }
 
