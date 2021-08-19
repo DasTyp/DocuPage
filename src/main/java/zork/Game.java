@@ -125,12 +125,8 @@ public class Game
             //Show available ways in the current room
             for (Way way : getCurrentRoom().getRoomWayList())
             {
-                if(way.isFree()){
-                    System.out.println("there is a " + way.getName() + " going " + way.getDirection() + ". " + way.getDescription());
-                }
-                else{
-                    System.out.println("there is a " + way.getName() + " going " + way.getDirection() + ". " + way.getAltDescription());
-                }
+                String wayDescription = way.isFree() ? way.getDescription() : way.getAltDescription();
+                System.out.println("there is a " + way.getName() + " going " + way.getDirection() + ". " + wayDescription);
             }
             //Show available items in the current room
             if (getCurrentRoom().getRoomItemList() != null)
@@ -146,12 +142,8 @@ public class Game
         else
         {
             Way resultWay = getWayForDirection(lookingAt);
-            if(resultWay.isFree()){
-                System.out.println("there is a " + resultWay.getName() + " going " + lookingAt + ". " + resultWay.getDescription());
-            }
-            else{
-                System.out.println("there is a " + resultWay.getName() + " going " + lookingAt + ". " + resultWay.getAltDescription());
-            }
+            String wayDescription = resultWay.isFree() ? resultWay.getDescription() : resultWay.getAltDescription();
+            System.out.println("there is a " + resultWay.getName() + " going " + lookingAt + ". " + wayDescription);
         }
     }
 
