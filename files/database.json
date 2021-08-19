@@ -80,7 +80,15 @@
           "isFree" : true
         }
       ],
-      "items": [],
+      "items": [
+        {
+        "strength": 0,
+        "name": "a parachute",
+        "description": "many meters of intact fabric and ropes",
+        "where": "is lying on the beach. It got washed ashore after you lost it in the ocean",
+        "state" : "removable"
+        }
+      ],
       "name": "eastern beach",
       "description": "a flat sandy beach continuing to east with dense jungle in the north and flooted mangroves in the west.\nIn the south lies a tiny island across the shallow ocean with a shiny, metallic looking object on it.\nA great white shark draws its circles there, it doesn't seem like it's going to move away.\nThere's a path into the jungle, but something big is lying in the shadows there..",
       "visited" : 0,

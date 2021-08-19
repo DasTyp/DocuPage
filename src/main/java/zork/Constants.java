@@ -35,4 +35,21 @@ public class Constants
      * Location of the json data for a new game
      */
     public static final String NEW_GAME ="files/database.json";
+
+    /**
+     * Intro text that shows up at the beginning of the game to introduce the backstory
+     */
+    public static final String INTRO_TEXT ="You are a scientist on your way to a secluded island in the Papua New Guinea " +
+            "archipelago to explore recently discovered indigenous people.\nThe chosen means of transportation, a light" +
+            " aircraft that was already shaking uncomfortably upon boarding, was perhaps not the best\nchoice for the journey." +
+            " Just like the accompanying pilot, who argues more with his wife over his mobile radio than concentrating\non" +
+            " the dense wall of clouds in front of him. Hey, what the heck, the trip can only get better....\nBut suddenly" +
+            " something rams the plane in the air with a big BAAAAAAANG!\nA bird? No matter what it was, the pilot gives the order to" +
+            " evacuate the now crashing plane, which means jumping out over the open ocean...!\nYou grab your backpack with the" +
+            " rescue parachute and jump out the emergency exit. Fortunately, the plane was already low enough over the water\n" +
+            "that you don't hurt yourself when you dive in. When you resurface, you just see the plane crash into a high" +
+            " cliff wall on an island not far away.\nFortunately an island! Now things can really only get better, can't they?" +
+            "\nYou detach the bothersome parachute from your backpack and swim towards it. The last few meters you wade" +
+            " through the shallow water and\nlie down on the beach, exhausted. What now? Did you end up in a bloody survival" +
+            " adventure game?!\nAt least you already have a backpack where you can collect things as inventory...\n";
 }

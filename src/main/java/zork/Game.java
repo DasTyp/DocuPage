@@ -35,7 +35,8 @@ public class Game
         Scanner userInput = new Scanner(System.in);
         this.player = player;
 
-        System.out.println("welcome to the zork game.");
+        System.out.println(Constants.INTRO_TEXT);
+        System.out.println("Welcome to the zork game!");
         Path path = Paths.get(Constants.SAVED_GAME);
         if(!Files.exists(path))
             System.out.println("if you want to load a saved game type 'load'.");
