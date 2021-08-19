@@ -4,14 +4,27 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 
+/**
+ * Inventory can store a specific amount of items
+ * @author Jonas Proell
+ * @version 19.08.2021
+ */
 public class Inventory {
 
+    /**
+     * Max size/amount of items the inventory can store
+     */
     @SerializedName("maxSize")
     private int maxSize;
+
+    /**
+     * List of items stored in the inventory
+     */
     @SerializedName("storedItems")
     private ArrayList<Item> storedItems = new ArrayList<>();
 
     /**
+     * Constructor for Inventory class
      * @author Jonas Proell
      * @param maxSize max amount of items the inventory can hold
      */
@@ -23,8 +36,8 @@ public class Inventory {
     }
 
     /**
+     * Adds an item to the inventory
      * @author Jonas Proell
-     * adds an item to the inventory
      * @param item the item which should be added to the inventory
      * @return true if the item was successfully added
      */
@@ -34,13 +47,16 @@ public class Inventory {
             return false;
         }else{
             storedItems.add(item);
+            if(storedItems.size() >= maxSize){
+                System.out.println("your inventory is full now");
+            }
             return true;
         }
     }
 
     /**
+     * Removes an item from the inventory
      * @author Jonas Proell
-     * removes an item from the inventory
      * @param item the item which should be removed from the inventory
      * @return true if the items was successfully removed
      */
@@ -49,8 +65,8 @@ public class Inventory {
     }
 
     /**
+     * Removes an item from the inventory by name
      * @author Jonas Proell
-     * removes an item from the inventory by name
      * @param name the name of the item which should be removed from the inventory
      */
     public boolean removeItem(String name){
@@ -63,8 +79,8 @@ public class Inventory {
     }
 
     /**
+     * Checks if the inventory holds a specific item
      * @author Jonas Proell
-     * checks if the inventory holds a specific item
      * @param item the item to be checked
      * @return true if the item is in the inventory
      */
@@ -78,31 +94,32 @@ public class Inventory {
     }
 
     /**
+     * Checks if the inventory holds a specific item by name
      * @author Jonas Proell
-     * checks if the inventory holds a specific item by name
      * @param name the name of the item to be checked
      * @return true if the item is in the inventory
      */
     public boolean hasItem(String name){
         for (Item i : storedItems) {
-            if (i.getName().equals(name)) return true;
+            if (i.getName().equals(name)){
+                return true;
+            }
         }
         return false;
     }
 
     /**
+     * Prints out all the items in the inventory
      * @author Jonas Proell
-     * prints out all the items in the inventory
      */
     public void show(){
-        int itemCount = storedItems.size();
-        if(itemCount < 1) System.out.println("your inventory is empty");
+        if(storedItems.size() < 1){
+            System.out.println("your inventory is empty");
+        }
         else{
             for(Item i : storedItems){
-                System.out.print(i.getName()+" ("+i.getDescription()+")");
+                System.out.println(i.getName()+" ("+i.getDescription()+")");
             }
-            System.out.println();
         }
     }
-
 }
