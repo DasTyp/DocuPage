@@ -4,9 +4,10 @@ import javax.swing.*;
 import java.awt.*;
 
 /**
- * @author Patrick Mayer
  * This class creates the window with a picture of the map
  * It extends the class JFrame
+ * @author Patrick Mayer
+ * @version 19.08.2021
  */
 public class Map extends JFrame {
 
@@ -14,10 +15,11 @@ public class Map extends JFrame {
     JPanel panel;
 
     /**
-     * @author Patrick Mayer
      * Contructor of class Map
      * It  sets position to the middle of the screen, adds the image and the size of the window,
      * sets the window visible, sets the title of the window sets closing operation
+     * @author Patrick Mayer
+     * @version 19.08.2021
      *
      * @param width         width of the window and the map
      * @param height        height of the window and the map
