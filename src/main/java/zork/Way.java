@@ -3,42 +3,41 @@ package zork;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Ways connect rooms
+ * Ways connect rooms and can be blocked
  */
 public class Way extends Thing {
     /**
-     * direction like north, south, ...
+     * Direction in their room like north, south, ...
      */
     @SerializedName("direction")
     private String direction;
 
     /**
-     * From room (name)
+     * Room name from where the way starts
      */
     @SerializedName("from")
     private String from;
 
     /**
-     * To room (name)
+     * Room name where the way leads to
      */
     @SerializedName("to")
     private String to;
 
     /**
-     * Marks room as blocked or free
+     * Marks room as free or blocked (true/false)
      */
     @SerializedName("isFree")
     private boolean isFree;
 
     /**
      * Constructor for a way object - calls the super constructor of the parent (thing) and adds the way-specific variables
-     *
-     * @param name the ways name
-     * @param description the ways description
-     * @param direction the ways direction
-     * @param from room name from where the way starts
-     * @param to room name where the way leads to
-     * @param isFree displays if way is free or blocked (true/false)
+     * @param name The ways name
+     * @param description The ways description
+     * @param direction The ways direction
+     * @param from Room name from where the way starts
+     * @param to Room name where the way leads to
+     * @param isFree Marks room as free or blocked (true/false)
      */
     public Way(String name, String description, String direction, String from, String to, boolean isFree) {
         super(name, description);
@@ -50,6 +49,7 @@ public class Way extends Thing {
 
     /**
      * Method simplifies the default output for a way object
+     * @return String that describes the way
      */
     @Override
     public String toString() {
@@ -59,7 +59,7 @@ public class Way extends Thing {
     /**
      * Check if way is free or blocked
      * @author Yvonne Rahnfeld
-     * @return true if way is free, false if way is blocked
+     * @return True if way is free, false if way is blocked
      */
     public boolean isFree() {
         return isFree;
@@ -81,26 +81,47 @@ public class Way extends Thing {
         this.isFree = false;
     }
 
+    /**
+     * @return The ways direction
+     */
     public String getDirection() {
         return direction;
     }
 
+    /**
+     * Set the ways new direction
+     * @param direction The ways new direction
+     */
     public void setDirection(String direction) {
         this.direction = direction;
     }
 
+    /**
+     * @return Room name from where the way starts
+     */
     public String getFrom() {
         return from;
     }
 
+    /**
+     * Set new room name from where the way starts
+     * @param from New room name from where the way starts
+     */
     public void setFrom(String from) {
         this.from = from;
     }
 
+    /**
+     * @return Room name where the way leads to
+     */
     public String getTo() {
         return to;
     }
 
+    /**
+     * Set new room name where the way leads to
+     * @param to New room name where the way leads to
+     */
     public void setTo(String to) {
         this.to = to;
     }

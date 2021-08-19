@@ -11,17 +11,24 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * This class controls the hole game
+ * This class processes user input and controls the hole game
  */
 public class Game
 {
+    /**
+     * Contains the players data
+     */
     Player player;
+
+    /**
+     * List of all rooms in this game
+     */
     @SerializedName("rooms")
     List<Room> rooms;
 
     /**
-     * Main playing method with the possible commands and their method call
-     * @param player the current player in the game
+     * Main playing method that processes user input, filters possible commands and calls the related methods
+     * @param player The current player in the game
      */
     public void play(Player player)
     {
@@ -76,8 +83,9 @@ public class Game
     }
 
     /**
-     * Look method: shows for the current room: all available items and all available ways
-     * @param lookingAt what the player is looking at
+     * Shows information about all ways, things and available items in current room when looking around or
+     * shows information about the way for given direction
+     * @param lookingAt The direction the player is looking at
      */
     public void look(String lookingAt)
     {
@@ -124,8 +132,8 @@ public class Game
     }
 
     /**
-     * Move method: moves in the chosen direction if it's a valid direction and if there's a way in this direction
-     * @param direction the direction the player wants to move
+     * Moves in the given direction if it's a valid direction and the way is not blocked
+     * @param direction The direction the player wants to move
      */
     public void move(String direction)
     {
@@ -155,8 +163,8 @@ public class Game
 
     /**
      * Helper method: Checks if a given string is contained in a given list
-     * @param input given input that has to be checked if it's proper
-     * @param properInput all proper input
+     * @param input Given input that has to be checked if it's proper
+     * @param properInput List of proper input
      */
     private boolean isProperInput(String input, List<String> properInput)
     {
@@ -179,7 +187,8 @@ public class Game
 
     /**
      * Helper method: Returns the way in the given direction if available (otherwise the way is null)
-     * @param direction given direction for looking for ways
+     * @param direction Given direction for looking for ways
+     * @return Way if there's a way in the given direction, otherwise return null
      */
     private Way getWayForDirection(String direction)
     {
@@ -196,7 +205,7 @@ public class Game
     }
 
     /**
-     * Helper method: Returns the current room object
+     * Helper method: Returns the current room
      */
     private Room getCurrentRoom()
     {

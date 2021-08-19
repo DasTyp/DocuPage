@@ -16,28 +16,27 @@ public class Room extends Thing {
     private int visited = 0;
 
     /**
-     * Description will change to altDescription after the first visit
+     * Alternative description after the first visit
      */
     @SerializedName("altDescription")
     private String altDescription = "";
 
     /**
-     * Ways into or out of the room
+     * List of ways out of the room
      */
     @SerializedName("ways")
     List<Way> roomWayList = new ArrayList<>();
 
     /**
-     * Items in the room
+     * List of items in the room
      */
     @SerializedName("items")
     private List<Item> roomItemList = new ArrayList<>();
 
     /**
      * Constructor for a room object - calls the super constructor of the parent (thing) and adds the room-specific variables
-     *
-     * @param name        the rooms name
-     * @param description thee rooms description
+     * @param name        The rooms name
+     * @param description The rooms description
      */
     public Room(String name, String description) {
         super(name, description);
@@ -45,28 +44,45 @@ public class Room extends Thing {
 
     /**
      * Method simplifies the default output for a room object
+     * @return String that describes the players position
      */
     @Override
     public String toString() {
         return "you are in the " + getName() + ".";
     }
 
+    /**
+     * @return How often the room was visited yet
+     */
     public int getVisited() {
         return visited;
     }
 
+    /**
+     * @return Alternative description after the first visit
+     */
     public String getAltDescription() {
         return altDescription;
     }
 
+    /**
+     * Set the alternative description after the first visit
+     * @param altDescription Alternative description after the first visit
+     */
     public void setAltDescription(String altDescription) {
         this.altDescription = altDescription;
     }
 
+    /**
+     * @return List of ways out of the room
+     */
     public List<Way> getRoomWayList() {
         return roomWayList;
     }
 
+    /**
+     * @return List of items in the room
+     */
     public List<Item> getRoomItemList() {
         return roomItemList;
     }

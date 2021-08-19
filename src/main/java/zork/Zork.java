@@ -9,7 +9,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 /**
- * Main class for the project
+ * Main class for the project, it parses, executes, saves and loads the game
  */
 public class Zork
 {
@@ -35,7 +35,7 @@ public class Zork
 
     /**
      * Method for saving the current game state into file savedGame.json (player, rooms with items and ways)
-     * @param g game that has to be saved
+     * @param g Game that has to be saved
      */
     public static void saveGame(Game g)
     {
@@ -58,7 +58,7 @@ public class Zork
      * Method for loading the game state from the given file
      * For the start of the game this function is called with database.json
      * If this function is called during the game it will try to load savedGame.json if it exists
-     * @param jsonFile json file that has to be loaded
+     * @param jsonFile Json file that has to be loaded
      */
     public static void loadGame(String jsonFile)
     {
@@ -76,7 +76,8 @@ public class Zork
     /**
      * Method is parsing the content of the given json (player, rooms with items and ways) and
      * returns a game with the corresponding settings
-     * @param file that has to be parsed
+     * @param file File that has to be parsed
+     * @return Parsed game data
      */
     public static Game parseData(String file)
     {
