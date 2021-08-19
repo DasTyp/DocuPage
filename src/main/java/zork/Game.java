@@ -125,7 +125,12 @@ public class Game
             //Show available ways in the current room
             for (Way way : getCurrentRoom().getRoomWayList())
             {
-                System.out.println("there is a " + way.getName() + " going " + way.getDirection() + ". " + way.getDescription());
+                if(way.isFree()){
+                    System.out.println("there is a " + way.getName() + " going " + way.getDirection() + ". " + way.getDescription());
+                }
+                else{
+                    System.out.println("there is a " + way.getName() + " going " + way.getDirection() + ". " + way.getAltDescription());
+                }
             }
             //Show available items in the current room
             if (getCurrentRoom().getRoomItemList() != null)
@@ -141,7 +146,12 @@ public class Game
         else
         {
             Way resultWay = getWayForDirection(lookingAt);
-            System.out.println("there is a " + resultWay.getName() + " going " + lookingAt + ". " + resultWay.getDescription());
+            if(resultWay.isFree()){
+                System.out.println("there is a " + resultWay.getName() + " going " + lookingAt + ". " + resultWay.getDescription());
+            }
+            else{
+                System.out.println("there is a " + resultWay.getName() + " going " + lookingAt + ". " + resultWay.getAltDescription());
+            }
         }
     }
 
@@ -158,7 +168,7 @@ public class Game
         else if (getWayForDirection(direction) == null)
             System.out.println("you can't move in this direction.");
         else if (!getWayForDirection(direction).isFree()) {
-            System.out.println("The " + getWayForDirection(direction).getName() + " is currently blocked, you can't move in this direction until you find a way to unlock it. " + getWayForDirection(direction).getDescription());
+            System.out.println("The " + getWayForDirection(direction).getName() + " is currently blocked, you can't move in this direction until you find a way to unlock it. " + getWayForDirection(direction).getAltDescription());
         }
         else
         {

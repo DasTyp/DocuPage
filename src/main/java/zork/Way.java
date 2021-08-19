@@ -31,6 +31,12 @@ public class Way extends Thing {
     private boolean isFree;
 
     /**
+     * Alternative description to be shown when a way is blocked
+     */
+    @SerializedName("altDescription")
+    private String altDescription;
+
+    /**
      * Constructor for a way object - calls the super constructor of the parent (thing) and adds the way-specific variables
      * @param name The ways name
      * @param description The ways description
@@ -124,5 +130,13 @@ public class Way extends Thing {
      */
     public void setTo(String to) {
         this.to = to;
+    }
+
+    /**
+     * Returns the alternative Description for blocked ways
+     * @return Alternative description
+     */
+    public String getAltDescription(){
+        return altDescription;
     }
 }
