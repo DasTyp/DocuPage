@@ -17,7 +17,8 @@
           "from": "island",
           "to": "eastern beach",
           "name": "way through shallow water to the main island",
-          "description": "The water is shallow enough to wade through, but a great white shark is swimming here. ",
+          "description": "The water is shallow enough to wade through. ",
+          "altDescription": "The water is shallow enough to wade through, but a great white shark is swimming here. ",
           "isFree" : false
         }
       ],
@@ -56,7 +57,8 @@
           "from": "eastern beach",
           "to": "jungle glade",
           "name": "path into the jungle",
-          "description": "The path seems to lead somewhere, but a crocodile is lying on it. It's huge and looks kinda hungry, you can't take that way as long as it lies there.",
+          "description": "The path seems to lead deep into the jungle.",
+          "altDescription": "The path seems to lead somewhere, but a crocodile is lying on it. It's huge and looks kinda hungry, you can't take that way as long as it lies there. ",
           "isFree" : false
         },
         {
@@ -64,7 +66,8 @@
           "from": "eastern beach",
           "to": "island",
           "name": "way through shallow water to the tiny island",
-          "description": "The water is shallow enough to wade through, but a great white shark is swimming here. ",
+          "description": "The water is shallow enough to wade through. ",
+          "altDescription": "The water is shallow enough to wade through, but a great white shark is swimming here. ",
           "isFree" : false
         },
         {
@@ -73,6 +76,7 @@
           "to": "middle beach",
           "name": "sandy way",
           "description": "",
+          "altDescription": "",
           "isFree" : true
         }
       ],
@@ -90,6 +94,7 @@
           "to": "eastern beach",
           "name": "sandy way",
           "description": "",
+          "altDescription": "",
           "isFree" : true
         },
         {
@@ -98,6 +103,7 @@
           "to": "western beach",
           "name": "sandy way",
           "description": "",
+          "altDescription": "",
           "isFree" : true
         }
       ],
@@ -130,6 +136,7 @@
           "to": "middle beach",
           "name": "sandy way",
           "description": "",
+          "altDescription": "",
           "isFree" : true
         },
         {
@@ -137,7 +144,8 @@
           "from": "western beach",
           "to": "palm forest",
           "name": "sandy trail into the palm forest",
-          "description": "It's a wind swept trail leading into the palm forest. It's overgrown with dense thorny bushes,\nthere's definitely no way through this without getting seriously hurt.",
+          "description": "It's a wind swept trail leading into the palm forest.",
+          "altDescription": "It's a wind swept trail leading into the palm forest. It's overgrown with dense thorny bushes,\nthere's definitely no way through this without getting seriously hurt.",
           "isFree" : false
         }
       ],
