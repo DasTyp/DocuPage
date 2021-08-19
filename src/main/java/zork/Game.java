@@ -66,6 +66,12 @@ public class Game
                     System.out.println("You have to say where you want to move (north, south, east, west, up, down).");
                 }
             }
+            else  if(isProperInput(input,Constants.DIRECTIONS)){
+                move(input);
+            }
+            else if(input.matches(Constants.EACH_DIRECTION)){
+                look(input);
+            }
             else if (input.matches("take|take (.+)"))
             {
                 if (input.matches("take (.+)")) {
