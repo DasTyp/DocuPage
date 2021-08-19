@@ -50,6 +50,19 @@ public class Game
 
             if (input.matches("help|info"))
                 System.out.println("Available commands: " + Constants.COMMAND_LIST);
+            // hidden warp command
+            else if (input.matches("warp|warp (.+)"))
+            {
+                if (input.matches("warp (.+)")) {
+                    String roomName = input.replace("warp ", "");
+                    player.setRoomName(roomName);
+                    System.out.println(getCurrentRoom());
+                    System.out.println(getCurrentRoom().getDescription());
+                }
+                else {
+                    System.out.println("You have to say which room you want to warp to.");
+                }
+            }
             else if (input.equals("quit") || input.equals("exit"))
                 System.exit(0);
             else if (input.matches("look|look (.+)"))
