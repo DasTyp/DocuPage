@@ -76,6 +76,16 @@ public class Game
                     System.out.println("You have to say what you want to take and add to your inventory.");
                 }
             }
+            else if (input.matches("drop|drop (.+)"))
+            {
+                if(input.matches("drop (.+)")) {
+                    String itemName = input.replace("drop ","");
+                    drop(itemName);
+                }
+                else {
+                    System.out.println("You have to specify an item from your inventory to drop.");
+                }
+            }
             else if (input.equals("?")) {
                 System.out.println(getCurrentRoom());
             }
@@ -185,6 +195,57 @@ public class Game
         Item foundItem = null;
         List<Item> roomItems = getCurrentRoom().getRoomItemList();
         for (Item item: roomItems) {
+            if (item.getName().equals(itemName)) {
+                foundItem =  item;
+            }
+        }
+        return foundItem;
+    }
+
+    /**
+     * Drops specified item from user Inventory into the current room if that item is in the players inventory.
+     * If an item already exists, don't add a new one.
+     * @author Christian Litke
+     * @param itemName from UserInput.
+     */
+    public void drop(String itemName) {
+        Item invItem = getItemFromInventory(itemName);
+        List<Item> roomItems =getCurrentRoom().getRoomItemList();
+        boolean itemFound = false;
+        if (invItem != null) {
+            boolean itemRemoved = player.inventory.removeItem(invItem);
+            if (itemRemoved) {
+                System.out.println("item \"" + invItem.getName() + "\" has been dropped. ");
+                //check if item already exists in room. Only applies for items there are infinite of.
+                for(Item roomItem: roomItems){
+                    if (roomItem.getName().equals(itemName)) {
+                        itemFound = true;
+                        break;
+                    }
+                }
+                if(itemFound == false){
+                    getCurrentRoom().getRoomItemList().add(invItem);
+                    invItem.setState("removable");
+                }
+                else {
+                    System.out.println("You can't tell it apart from all the other " + invItem.getName() + " anymore. ");
+                }
+            }
+        }
+        else {
+            System.out.println("the thing \"" + itemName + "\" you want to drop isn't something you have. ");
+        }
+    }
+
+    /**
+     * @author Christian Litke
+     * @param itemName from item to look for in player inventory, from user input
+     * @return searched item if it is in inventory
+     */
+    private Item getItemFromInventory(String itemName) {
+        Item foundItem = null;
+        List<Item> invItems = player.inventory.getInventoryList();
+        for (Item item: invItems) {
             if (item.getName().equals(itemName)) {
                 foundItem =  item;
             }

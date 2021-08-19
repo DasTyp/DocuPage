@@ -21,7 +21,8 @@
           "strength": 0,
           "name": "key",
           "description": "a large, rusty key ring",
-          "where": "is lying on the ground"
+          "where": "is lying on the ground",
+          "state": "infinite"
         },
         {
           "strength": 1,
