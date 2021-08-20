@@ -398,8 +398,8 @@
           "from": "Cave entrance",
           "to": "cave fork",
           "name": "small cave passage",
-          "description": "It is a small, pretty dark passage, guarded by a big and poisonous snake, which I can not fight agains, because it is to strong.",
-          "altDescription": "It is a small pretty dark passage. The snake is still distracted",
+          "description": "It is a small pretty dark passage. The snake is still distracted",
+          "altDescription": "It is a small, pretty dark passage, guarded by a big and poisonous snake, which I can not fight agains, because it is to strong.",
           "isFree": false
         },
         {
@@ -439,8 +439,8 @@
           "from": "cave fork",
           "to": "treasure cave",
           "name": "wooden door",
-          "description": "There is a closed door. But it doesn´t look very stable...",
-          "altDescription": "There is an open door",
+          "description": "There is an open door",
+          "altDescription": "There is a closed door. But it doesn´t look very stable...",
           "isFree": false
         },
         {
