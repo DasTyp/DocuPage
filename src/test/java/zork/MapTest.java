@@ -7,10 +7,10 @@ import java.util.Objects;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MapTest {
-    @Test
     /**
      * Method to test, if all objects of the map window get created and are visible.
      */
+    @Test
     public void testMap(){
         Map testMap;
         testMap = new Map(650,400,"Map",Constants.MAP);
