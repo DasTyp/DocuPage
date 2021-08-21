@@ -108,7 +108,7 @@ public class Inventory {
 
 
     /**
-     * mirrors itemlist for rooms. Required for drop command
+     * mirrors itemlist for rooms.
      * @author Christian Litke
      * @return list object of stored items
      */

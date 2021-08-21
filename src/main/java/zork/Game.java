@@ -233,14 +233,15 @@ public class Game
             }
         }
         else {
-            System.out.println("the thing \"" + itemName + "\" you want to drop isn't something you have. ");
+            System.out.println("the thing \"" + itemName + "\" you want to drop isn't in your inventory. ");
         }
     }
 
     /**
      * @author Christian Litke
      * @param itemName from item to look for in player inventory, from user input
-     * @return searched item if it is in inventory
+     * @return searched item if it is in inventory. Null if it isn't
+     * helper function, fetches item object from players inventory if it exists.
      */
     private Item getItemFromInventory(String itemName) {
         Item foundItem = null;
