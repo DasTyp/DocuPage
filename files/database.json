@@ -22,7 +22,7 @@
           "name": "key",
           "description": "a large, rusty key ring",
           "where": "is lying on the ground",
-          "state" : "fixed"
+          "state" : "removable"
         },
         {
           "strength": 1,
