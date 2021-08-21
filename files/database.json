@@ -408,6 +408,7 @@
           "to": "Healers' Hut",
           "name": "a small path",
           "description": "It is a small path. In the distance I can see a village.",
+          "altDescription" : "",
           "isFree": true
         },
         {
@@ -416,12 +417,14 @@
           "to": "cliff wall",
           "name": "rocky path",
           "description": "It is a rocky path along the cliff.",
+          "altDescription" : "",
           "isFree": true
         }
       ],
       "items": [],
       "name": "Cave entrance",
       "description": "It is a clearing in front of the cliffs. You can see a dark passage, which seems to lead in a cave.",
+      "altDescription" : "",
       "visited": 0
     },
     {
@@ -432,6 +435,7 @@
           "to": "Cave entrance",
           "name": "small cave passage",
           "description": "It is a small, pretty dark passage, leading outside of the cave.",
+          "altDescription" : "",
           "isFree": true
         },
         {
@@ -465,6 +469,7 @@
       ],
       "name": "cave fork",
       "description": "The cave splits in two ways.",
+      "altDescription" : "",
       "visited": 0
     },
     {
@@ -475,6 +480,7 @@
           "to": "cave fork",
           "name": "wooden door",
           "description": "The wooden door is open now.",
+          "altDescription" : "",
           "isFree": true
         }
       ],
@@ -490,6 +496,7 @@
       "name": "treasure cave",
       "enable" : "on machete",
       "description": "There are a lot of cobwebs all around. I can barely see anything.",
+      "altDescription" : "There is a small room with some things on the floor.",
       "visited": 0
     },
     {
@@ -500,6 +507,7 @@
           "to": "cave fork",
           "name": "a small passage",
           "description": "Small passage, which leads out of the cave. Hopefully it will not break in.",
+          "altDescription" : "",
           "isFree": true
         }
       ],
@@ -514,6 +522,7 @@
       ],
       "name": "boss cave",
       "description": "There is a big bear in this room. The bear holds a two-way radio in his hands. I need to fight him to get it.",
+      "altDescription" : "There is the dead body of the bear on the floor.",
       "visited": 0
     },
     {
