@@ -47,8 +47,8 @@
       ],
       "name": "island",
       "description": "a tiny island with a small jungle in the middle and beach around it. There are some fish swimming in the eastern ocean.\nUnfortunately the great white shark is back in the shallow water between the main island and this little one.\nSeems to be his favourite place...",
-      "visited" : 0,
-      "altDescription" : ""
+      "altDescription" : "",
+      "visited" : 0
     },
     {
       "ways": [
@@ -91,8 +91,8 @@
       ],
       "name": "eastern beach",
       "description": "a flat sandy beach continuing to east with dense jungle in the north and flooted mangroves in the west.\nIn the south lies a tiny island across the shallow ocean with a shiny, metallic looking object on it.\nA great white shark draws its circles there, it doesn't seem like it's going to move away.\nThere's a path into the jungle, but something big is lying in the shadows there..",
-      "visited" : 0,
-      "altDescription" : "a flat sandy beach continuing to east with dense jungle in the north and flooted mangroves in the west.\nIn the south lies a tiny island across the shallow ocean. A great white shark draws its circles there,\nit doesn't seem like it's going to move away.\nThere's a path into the jungle, but something big is lying in the shadows there..\""
+      "altDescription" : "a flat sandy beach continuing to east with dense jungle in the north and flooted mangroves in the west.\nIn the south lies a tiny island across the shallow ocean. A great white shark draws its circles there,\nit doesn't seem like it's going to move away.\nThere's a path into the jungle, but something big is lying in the shadows there..\"",
+      "visited" : 0
     },
     {
       "ways": [
@@ -133,8 +133,8 @@
       ],
       "name": "middle beach",
       "description": "a long, flat sandy beach continuing to east and west with dense jungle and some palms in the north. \nTo the south lies the endless sea with large schools of fish in the shallow water",
-      "visited" : 0,
-      "altDescription" : ""
+      "altDescription" : "",
+      "visited" : 0
     },
     {
       "ways": [
@@ -168,8 +168,8 @@
       ],
       "name": "western beach",
       "description": "a long, flat sandy beach continuing to the east with dense palm forest in the north and high cliffs to the west. \nA small sandy trail seems to lead into the forest, but it's overgrown with thorny bushes. A wide river separates beach and cliffs.\nThe front half of the broken plane is hanging on the cliffs. It looks almost unharmed, like there could be intact technical devices in there.\nThe pilot surely owned a mobile two-way radio for emergency reasons..",
-      "visited" : 0,
-      "altDescription" : "a long, flat sandy beach continuing to the east with dense palm forest in the north and high cliffs to the west. \nA small sandy trail seems to lead into the forest, but it's overgrown with thorny bushes. A wide river separates beach and cliffs.\nThe front half of the broken plane is hanging on the cliffs. It looks almost unharmed, like there could be intact technical devices in there"
+      "altDescription" : "a long, flat sandy beach continuing to the east with dense palm forest in the north and high cliffs to the west. \nA small sandy trail seems to lead into the forest, but it's overgrown with thorny bushes. A wide river separates beach and cliffs.\nThe front half of the broken plane is hanging on the cliffs. It looks almost unharmed, like there could be intact technical devices in there",
+      "visited" : 0
     },
     {
       "ways": [
