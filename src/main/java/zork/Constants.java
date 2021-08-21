@@ -13,11 +13,16 @@ public class Constants
 
     // Possible commands for the game - has to be extended if there are new commands added to the game
     public static final List<String> COMMAND_LIST = new ArrayList<>(
-            Arrays.asList("move + north / east / west / south / up / down", "look + around / north / east / west / south / up / down", "quit or exit", "?", "help or info", "show inventory")
+            Arrays.asList("move + north / east / west / south / up / down", "look + around / north / east / west / south / up / down", "quit or exit", "?", "help or info","map", "show inventory")
     );
 
     // Location of the jsons for a new or a saved game
     public static final String SAVED_GAME = "files/savedGame.json";
     public static final String NEW_GAME ="files/database.json";
     public static final String TEST_DATA ="files/testData.json";
+
+    /**
+     * Location and size of image of the map
+     */
+    public static final String MAP ="files/map.PNG";
 }

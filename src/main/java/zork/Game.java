@@ -24,6 +24,8 @@ public class Game
         Scanner userInput = new Scanner(System.in);
         this.player = player;
 
+        Map map; //Declaration of the Map
+
         System.out.println("welcome to the zork game.");
         Path path = Paths.get(Constants.SAVED_GAME);
         if(!Files.exists(path)) {
@@ -85,6 +87,9 @@ public class Game
             else if (input.matches("restore|load")) {
                 Zork.loadGame(Constants.SAVED_GAME);
             }
+            else if (input.matches("map")){
+                map=new Map("MAP", Constants.MAP);
+            }
             else {
                 System.out.println("Unknown command.");
             }
@@ -125,6 +130,7 @@ public class Game
                 }
             }
         }
+
         // Entered phrase is "look + valid direction": show way for the selected direction
         else {
             Way resultWay = getWayForDirection(lookingAt);
