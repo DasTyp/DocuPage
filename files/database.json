@@ -523,19 +523,19 @@
           "from": "cliff coast",
           "to": "cliff wall",
           "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "description": "There is a small passage up the hills."
         },
         {
           "direction": "west",
           "from": "cliff coast",
           "to": "palm forest",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "name": "sandy path",
+          "description": "at the end of the sand path you can see the forest."
         }
       ],
       "items": [],
       "name": "cliff coast",
-      "description": "the 1st cliff room"
+      "description": "a small coast on the side of the island with a part of beach and the hills on the side."
     },
     {
       "ways": [
@@ -544,26 +544,28 @@
           "from": "cliff wall",
           "to": "ape horde",
           "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "description": "A small passage up the hills. The apes are still distracted.",
+          "altDescription": "A small passage up the hills. Rocks are thrown in your direction by apes and can hit you. You should to distract them.",
+          "isFree": false
         },
         {
           "direction": "south",
           "from": "cliff wall",
           "to": "cliff coast",
           "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "description": "A small passage down the hills."
         },
         {
           "direction": "east",
           "from": "cliff wall",
           "to": "Cave entrance",
           "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "description": "A small passage sideway the hills."
         }
       ],
       "items": [],
       "name": "cliff wall",
-      "description": "the 2nd cliff room"
+      "description": "A small passage up the hills."
     },
     {
       "ways": [
@@ -572,26 +574,28 @@
           "from": "ape horde",
           "to": "cliff wall",
           "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "description": "A small passage down the hills."
         },
         {
           "direction": "east",
           "from": "ape horde",
           "to": "middle beach",
           "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "description": "The apes ate all the bananas and are not distracted anymore. They get angry because you tricked them and throw you down the hills into the ocean. The water stream washes you ashore again."
         },
         {
           "direction": "west",
           "from": "ape horde",
           "to": "front of a wooden house",
-          "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "name": "rope bridge",
+          "description": "A rope bridges connect two hills and leads to a small wooden house. The ape king lies on the ground. You can pass easily.",
+          "altDescription": "A rope bridges connect two hills and leads to a small wooden house. But the way is blocked by a giant ape. This must be the ape king.",
+          "isFree": false
         }
       ],
       "items": [],
       "name": "ape horde",
-      "description": "the 3rd cliff room"
+      "description": "A small plateau on the hills where the apes are living."
     },
     {
       "ways": [
@@ -600,19 +604,21 @@
           "from": "front of a wooden house",
           "to": "inside of a wooden house",
           "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "description": "The door is open so you can get inside.",
+          "altDescription": "The door is locked. You will need a key to open it.",
+          "isFree": false
         },
         {
           "direction": "east",
           "from": "front of a wooden house",
           "to": "ape horde",
           "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "description": "At the end of the rope brigde you see the plateau of the apes."
         }
       ],
       "items": [],
       "name": "front of a wooden house",
-      "description": "the 4th cliff room"
+      "description": "You stand in front of the wooden house."
     },
     {
       "ways": [
@@ -621,12 +627,12 @@
           "from": "inside of a wooden house",
           "to": "front of a wooden house",
           "name": "a way",
-          "description": "it's a way. it goes somewhere."
+          "description": "Leaving the house."
         }
       ],
       "items": [],
       "name": "inside of a wooden house",
-      "description": "the 5th cliff room"
+      "description": "Inside the house you find an old radio transmitter. Some parts need to be fixed, but then it should work."
     }
   ]
 }
