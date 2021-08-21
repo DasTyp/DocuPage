@@ -77,7 +77,7 @@ public class Map extends JFrame {
     }
 
     /**
-     * reads a image of the given path and retruns it
+     * reads an image of the given path and retruns it
      * @author Patrick Mayer
      * @param inputImagePath Path of the image, which shoud be read
      * @return Bufferedimage with the image
@@ -146,7 +146,7 @@ public class Map extends JFrame {
     }
 
     /**
-     * tests if the screen is to small for the image
+     * Checks if the screen is to small for the image
      * @author Patrick Mayer
      * @return boolean if screen is to small for the image
      */
