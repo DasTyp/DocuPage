@@ -13,7 +13,7 @@ public class Constants
 
     // Possible commands for the game - has to be extended if there are new commands added to the game
     public static final List<String> COMMAND_LIST = new ArrayList<>(
-            Arrays.asList("move + north / east / west / south / up / down", "look + around / north / east / west / south / up / down", "quit or exit", "?", "help or info", "show inventory")
+            Arrays.asList("move + north / east / west / south / up / down or north / east / west / south / up / down", "look + around / north / east / west / south / up / down or around", "quit or exit", "?", "help or info", "show inventory")
     );
 
     // Location of the jsons for a new or a saved game
