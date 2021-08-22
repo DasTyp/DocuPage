@@ -117,7 +117,7 @@ public class GameTest {
     }
 
     /**
-     * Assert Player doesnt move from test room 1 to test room 2 after the input of "east"
+     * Assert Player moves from test room 1 to test room 2 after the input of "east"
      * @author Patrick Mayer
      */
     @Test
