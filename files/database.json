@@ -178,21 +178,24 @@
           "from": "palm forest",
           "to": "western beach",
           "name": "sandy trail",
-          "description": "a wind swept trail leading to the beach."
+          "description": "a wind swept trail leading to the beach.",
+          "isFree": true
         },
         {
           "direction": "east",
           "from": "palm forest",
           "to": "dense jungle",
           "name": "a trail",
-          "description": "an animal trail leading towards the wilds."
+          "description": "an animal trail leading towards the wilds.",
+          "isFree": true
         },
         {
           "direction": "west",
           "from": "palm forest",
           "to": "cliff coast",
           "name": "a gravel path",
-          "description": "at the end of this gravel path you can see the cliffs."
+          "description": "at the end of this gravel path you can see the cliffs.",
+          "isFree": true
         }
       ],
       "items": [],
@@ -206,21 +209,24 @@
           "from": "dense jungle",
           "to": "sparse jungle",
           "name": "cleared path",
-          "description": "you can see footsteps on this path! There must be other people."
+          "description": "you can see footsteps on this path! There must be other people.",
+          "isFree": true
         },
         {
           "direction": "east",
           "from": "dense jungle",
           "to": "palm forest",
           "name": "a trail",
-          "description": "an animal trail leading towards the ocean."
+          "description": "an animal trail leading towards the ocean.",
+          "isFree": true
         },
         {
           "direction": "west",
           "from": "dense jungle",
           "to": "jungle glade",
           "name": "an animal trail",
-          "description": "a well worn trail, it must have seen much use."
+          "description": "a well worn trail, it must have seen much use.",
+          "isFree": true
         }
       ],
       "items": [],
@@ -234,14 +240,16 @@
           "from": "jungle glade",
           "to": "eastern beach",
           "name": "a path",
-          "description": "it's barely visible, but you can make your way through the trees south."
+          "description": "it's barely visible, but you can make your way through the trees south.",
+          "isFree": true
         },
         {
           "direction": "west",
           "from": "jungle glade",
           "to": "dense jungle",
           "name": "an animal trail",
-          "description": "a well worn trail, it must have seen much use."
+          "description": "a well worn trail, it must have seen much use.",
+          "isFree": true
         }
       ],
       "items": [
@@ -249,7 +257,8 @@
           "strength": 0,
           "name": "berries",
           "description": "suspicious red berries",
-          "where": "on a bush"
+          "where": "on a bush",
+          "state": "fixed"
         }
       ],
       "name": "jungle glade",
@@ -262,14 +271,16 @@
           "from": "sparse jungle",
           "to": "Village Center",
           "name": "a path",
-          "description": "a wandering path, you can spot human usage."
+          "description": "a wandering path, you can spot human usage.",
+          "isFree": true
         },
         {
           "direction": "south",
           "from": "sparse jungle",
           "to": "dense jungle",
           "name": "cleared path",
-          "description": "it's a path that has been hacked through the jungle."
+          "description": "it's a path that has been hacked through the jungle.",
+          "isFree": true
         }
       ],
       "items": [],
@@ -440,7 +451,7 @@
           "to": "treasure cave",
           "name": "wooden door",
           "description": "There is an open door",
-          "altDescription": "There is a closed door. But it doesn´t look very stable...",
+          "altDescription": "There is a closed door. But it doesn't look very stable...",
           "isFree": false
         },
         {
