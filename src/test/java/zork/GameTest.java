@@ -2,8 +2,12 @@ package zork;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.util.List;
 import java.util.Objects;
+import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -194,5 +198,25 @@ public class GameTest {
             }
         }
         return false;
+    }
+
+    /**
+     * Assert Player moves from test room 1 to test room 2 after the input of "east"
+     * @author Patrick Mayer
+     */
+    @Test
+    @DisplayName("CommandAlias case: player is in test room 1 and input is east -> player is in test room 2")
+    public void testCommandAlias(){
+        game.player.setRoomName("test room 1");
+        InputStream sysInBackup = System.in; // backup System.in to restore it later
+        ByteArrayInputStream in = new ByteArrayInputStream("east".getBytes());
+        System.setIn(in);
+        Scanner userInput = new Scanner(System.in);
+        String input = userInput.nextLine();
+        game.move(input);
+        assertTrue(game.player.getRoomName().equals("test room 2"));
+
+// optionally, reset System.in to its original
+        System.setIn(sysInBackup);
     }
 }
