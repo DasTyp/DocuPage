@@ -284,6 +284,7 @@
           "to": "sparse jungle",
           "name": "path back to the jungle",
           "description": "a wandering path, you can spot human usage",
+          "altDescription": "",
           "isFree": true
         },
         {
@@ -292,6 +293,7 @@
           "to": "Traders' Hut",
           "name": "entrance to the traders' hut",
           "description": "a door that leads to the inside of a hut, which looks like a kind of market",
+          "altDescription": "",
           "isFree": true
         },
         {
@@ -300,6 +302,7 @@
           "to": "Mystic Hut",
           "name": "entrance to a mysterious looking hut",
           "description": "a door which is decorated with bones and skulls and greenish smoke rises from the mysterious black hut",
+          "altDescription": "",
           "isFree": true
         },
         {
@@ -308,14 +311,15 @@
           "to": "Healers' Hut",
           "name": "entrance to the healers' hut",
           "description": "a door into a large hut which seems to belong to the healer",
+          "altDescription": "",
           "isFree": true
         }
       ],
       "items": [],
       "name": "Village Center",
       "description": "a large place between three huts. In the middle there is a campfire with a large cauldron for cooking.\nSpread around the place are some locals who look at you skeptically.",
-      "visited": 0,
-      "altDescription": ""
+      "altDescription": "",
+      "visited": 0
     },
     {
       "ways": [
@@ -325,14 +329,15 @@
           "to": "Village Center",
           "name": "exit to the village center",
           "description": "a doorway decorated with bones leading back to the village center",
+          "altDescription": "",
           "isFree": true
         }
       ],
       "items": [],
       "name": "Mystic Hut",
       "description": "a dark hut, lit only by the flickering of a greenish campfire. Bones hang from the ceiling.\nA resident of the village drums and sings fanatically. Perhaps it is a ritual?\nAround the fire lie various objects: fish bones, a starfish, seaweed and a pile of sand. It seems there is room for one more object..",
-      "visited": 0,
-      "altDescription": ""
+      "altDescription": "",
+      "visited": 0
     },
     {
       "ways": [
@@ -342,14 +347,15 @@
           "to": "Village Center",
           "name": "guarded doorway back to the village center",
           "description": "next to the door are two residents armed with a spear. So you should not try to steal here",
+          "altDescription": "",
           "isFree": true
         }
       ],
       "items": [],
       "name": "Traders' Hut",
       "description": "a spacious hut with a trader standing behind a counter.\nThe entire room is filled with treasures, such as weapons, masks or jewelry",
-      "visited": 0,
-      "altDescription": ""
+      "altDescription": "",
+      "visited": 0
     },
     {
       "ways": [
@@ -359,6 +365,7 @@
           "to": "Village Center",
           "name": "exit door to the village center",
           "description": "a wide door closed by curtains",
+          "altDescription": "",
           "isFree": true
         },
         {
@@ -367,6 +374,7 @@
           "to": "Cave entrance",
           "name": "a secret hatch leading into the cave",
           "description": "a hatch is hidden behind a curtain, which leads into a cave",
+          "altDescription": "",
           "isFree": true
         }
       ],
@@ -388,8 +396,8 @@
       ],
       "name": "Healers' Hut",
       "description": "a narrow hut with a stretcher in the center.\nA wounded man lies on the stretcher. Next to the person is a concerned resident who is treating the wounds.\nAll around him are shelves with jars containing colored liquids",
-      "visited": 0,
-      "altDescription": ""
+      "altDescription": "",
+      "visited": 0
     },
     {
       "ways": [
