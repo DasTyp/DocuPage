@@ -101,8 +101,9 @@ public class Inventory {
         else{
             for(Item i : storedItems){
                 System.out.print(i.getName()+" ("+i.getDescription()+")");
+                System.out.println();
             }
-            System.out.println();
+
         }
     }
 
