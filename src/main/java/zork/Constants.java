@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-// Class with some constant variables
+
 public class Constants
 {
     // Constans for the possible directions in the game
