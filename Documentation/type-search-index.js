@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"zork","l":"Constants"},{"p":"zork","l":"Game"},{"p":"zork","l":"Inventory"},{"p":"zork","l":"Item"},{"p":"zork","l":"Map"},{"p":"zork","l":"Player"},{"p":"zork","l":"Room"},{"p":"zork","l":"Splash"},{"p":"zork","l":"Thing"},{"p":"zork","l":"Way"},{"p":"zork","l":"Zork"}];updateSearchResults();
