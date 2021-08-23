@@ -5,10 +5,22 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The player can put things in his inventoryand  remove or use them
+ * @author Jonas Proell
+ * @version 12.08.2021
+ */
 public class Inventory {
 
+    /**
+     * Maximum amount of items in the inventory
+     */
     @SerializedName("maxSize")
     private int maxSize;
+
+    /**
+     * List of items in the inventory
+     */
     @SerializedName("storedItems")
     private ArrayList<Item> storedItems = new ArrayList<>();
 
@@ -24,8 +36,8 @@ public class Inventory {
     }
 
     /**
+     * Adds an item to the inventory
      * @author Jonas Proell
-     * adds an item to the inventory
      * @param item the item which should be added to the inventory
      * @return true if the item was successfully added
      */
@@ -40,8 +52,8 @@ public class Inventory {
     }
 
     /**
+     * Removes an item from the inventory
      * @author Jonas Proell
-     * removes an item from the inventory
      * @param item the item which should be removed from the inventory
      * @return true if the items was successfully removed
      */
@@ -50,8 +62,8 @@ public class Inventory {
     }
 
     /**
+     * Removes an item from the inventory by name
      * @author Jonas Proell
-     * removes an item from the inventory by name
      * @param name the name of the item which should be removed from the inventory
      */
     public boolean removeItem(String name){
@@ -64,8 +76,8 @@ public class Inventory {
     }
 
     /**
+     * Checks if the inventory holds a specific item
      * @author Jonas Proell
-     * checks if the inventory holds a specific item
      * @param item the item to be checked
      * @return true if the item is in the inventory
      */
@@ -79,8 +91,8 @@ public class Inventory {
     }
 
     /**
+     * Checks if the inventory holds a specific item by name
      * @author Jonas Proell
-     * checks if the inventory holds a specific item by name
      * @param name the name of the item to be checked
      * @return true if the item is in the inventory
      */
@@ -92,8 +104,8 @@ public class Inventory {
     }
 
     /**
+     * Prints out all the items in the inventory
      * @author Jonas Proell
-     * prints out all the items in the inventory
      */
     public void show(){
         int itemCount = storedItems.size();
@@ -109,7 +121,7 @@ public class Inventory {
 
 
     /**
-     * mirrors itemlist for rooms.
+     * Returns item list for rooms.
      * @author Christian Litke
      * @return list object of stored items
      */
