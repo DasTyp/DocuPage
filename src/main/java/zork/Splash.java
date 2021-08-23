@@ -1,13 +1,8 @@
 package zork;
 
-/**
- * Splash screen for the game start
- */
+// Splash screen for the game start
 public class Splash
 {
-    /**
-     * Prints Splash Screen on console
-     */
     public static void print()
     {
         System.out.println("          _____                    _____                    _____                    _____          ");
