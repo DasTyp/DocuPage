@@ -23,7 +23,7 @@ public class Constants
      * Possible commands for the game - has to be extended if there are new commands implemented in the game
      */
     public static final List<String> COMMAND_LIST = new ArrayList<>(
-            Arrays.asList("move + north / east / west / south / up / down", "look + around / north / east / west / south / up / down", "quit or exit", "?", "help or info")
+            Arrays.asList("move + north / east / west / south / up / down or north / east / west / south / up / down", "look + around / north / east / west / south / up / down or around", "quit or exit", "?", "help or info", "show inventory or inventory", "take + \"item\"", "drop + \"item\"")
     );
 
     /**
@@ -35,6 +35,16 @@ public class Constants
      * Location of the json data for a new game
      */
     public static final String NEW_GAME ="files/database.json";
+
+    /**
+     * Location of the json data for unit tests
+     */
+    public static final String TEST_DATA ="files/testData.json";
+
+    /**
+     * Location and size of image of the map
+     */
+    public static final String MAP ="files/map.PNG";
 
     /**
      * Intro text that shows up at the beginning of the game to introduce the backstory

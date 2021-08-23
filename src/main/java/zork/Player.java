@@ -10,6 +10,16 @@ public class Player
     /**
      * The players name
      */
+    /**
+     * The players inventory
+     */
+    Inventory inventory;
+
+    /**
+     * The initial amount of items the player can carry in his inventory
+     */
+    int maxInventorySize = 10;
+
     @SerializedName("name")
     private String name = "Hugo";
 
@@ -34,6 +44,10 @@ public class Player
     /**
      * @return The players reached points in the game (high score)
      */
+    Player() {
+        inventory = new Inventory(maxInventorySize);
+    }
+
     public int getPoints()
     {
         return points;
