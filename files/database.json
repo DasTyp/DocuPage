@@ -178,21 +178,24 @@
           "from": "palm forest",
           "to": "western beach",
           "name": "sandy trail",
-          "description": "a wind swept trail leading to the beach."
+          "description": "a wind swept trail leading to the beach.",
+          "isFree": true
         },
         {
           "direction": "east",
           "from": "palm forest",
           "to": "dense jungle",
           "name": "a trail",
-          "description": "an animal trail leading towards the wilds."
+          "description": "an animal trail leading towards the wilds.",
+          "isFree": true
         },
         {
           "direction": "west",
           "from": "palm forest",
           "to": "cliff coast",
           "name": "a gravel path",
-          "description": "at the end of this gravel path you can see the cliffs."
+          "description": "at the end of this gravel path you can see the cliffs.",
+          "isFree": true
         }
       ],
       "items": [],
@@ -206,21 +209,24 @@
           "from": "dense jungle",
           "to": "sparse jungle",
           "name": "cleared path",
-          "description": "you can see footsteps on this path! There must be other people."
+          "description": "you can see footsteps on this path! There must be other people.",
+          "isFree": true
         },
         {
           "direction": "east",
           "from": "dense jungle",
           "to": "palm forest",
           "name": "a trail",
-          "description": "an animal trail leading towards the ocean."
+          "description": "an animal trail leading towards the ocean.",
+          "isFree": true
         },
         {
           "direction": "west",
           "from": "dense jungle",
           "to": "jungle glade",
           "name": "an animal trail",
-          "description": "a well worn trail, it must have seen much use."
+          "description": "a well worn trail, it must have seen much use.",
+          "isFree": true
         }
       ],
       "items": [],
@@ -234,14 +240,16 @@
           "from": "jungle glade",
           "to": "eastern beach",
           "name": "a path",
-          "description": "it's barely visible, but you can make your way through the trees south."
+          "description": "it's barely visible, but you can make your way through the trees south.",
+          "isFree": true
         },
         {
           "direction": "west",
           "from": "jungle glade",
           "to": "dense jungle",
           "name": "an animal trail",
-          "description": "a well worn trail, it must have seen much use."
+          "description": "a well worn trail, it must have seen much use.",
+          "isFree": true
         }
       ],
       "items": [
@@ -249,7 +257,8 @@
           "strength": 0,
           "name": "berries",
           "description": "suspicious red berries",
-          "where": "on a bush"
+          "where": "on a bush",
+          "state": "fixed"
         }
       ],
       "name": "jungle glade",
@@ -262,14 +271,16 @@
           "from": "sparse jungle",
           "to": "Village Center",
           "name": "a path",
-          "description": "a wandering path, you can spot human usage."
+          "description": "a wandering path, you can spot human usage.",
+          "isFree": true
         },
         {
           "direction": "south",
           "from": "sparse jungle",
           "to": "dense jungle",
           "name": "cleared path",
-          "description": "it's a path that has been hacked through the jungle."
+          "description": "it's a path that has been hacked through the jungle.",
+          "isFree": true
         }
       ],
       "items": [],
@@ -284,6 +295,7 @@
           "to": "sparse jungle",
           "name": "path back to the jungle",
           "description": "a wandering path, you can spot human usage",
+          "altDescription": "",
           "isFree": true
         },
         {
@@ -292,6 +304,7 @@
           "to": "Traders' Hut",
           "name": "entrance to the traders' hut",
           "description": "a door that leads to the inside of a hut, which looks like a kind of market",
+          "altDescription": "",
           "isFree": true
         },
         {
@@ -300,6 +313,7 @@
           "to": "Mystic Hut",
           "name": "entrance to a mysterious looking hut",
           "description": "a door which is decorated with bones and skulls and greenish smoke rises from the mysterious black hut",
+          "altDescription": "",
           "isFree": true
         },
         {
@@ -308,14 +322,15 @@
           "to": "Healers' Hut",
           "name": "entrance to the healers' hut",
           "description": "a door into a large hut which seems to belong to the healer",
+          "altDescription": "",
           "isFree": true
         }
       ],
       "items": [],
       "name": "Village Center",
       "description": "a large place between three huts. In the middle there is a campfire with a large cauldron for cooking.\nSpread around the place are some locals who look at you skeptically.",
-      "visited": 0,
-      "altDescription": ""
+      "altDescription": "",
+      "visited": 0
     },
     {
       "ways": [
@@ -325,14 +340,15 @@
           "to": "Village Center",
           "name": "exit to the village center",
           "description": "a doorway decorated with bones leading back to the village center",
+          "altDescription": "",
           "isFree": true
         }
       ],
       "items": [],
       "name": "Mystic Hut",
       "description": "a dark hut, lit only by the flickering of a greenish campfire. Bones hang from the ceiling.\nA resident of the village drums and sings fanatically. Perhaps it is a ritual?\nAround the fire lie various objects: fish bones, a starfish, seaweed and a pile of sand. It seems there is room for one more object..",
-      "visited": 0,
-      "altDescription": ""
+      "altDescription": "",
+      "visited": 0
     },
     {
       "ways": [
@@ -342,14 +358,15 @@
           "to": "Village Center",
           "name": "guarded doorway back to the village center",
           "description": "next to the door are two residents armed with a spear. So you should not try to steal here",
+          "altDescription": "",
           "isFree": true
         }
       ],
       "items": [],
       "name": "Traders' Hut",
       "description": "a spacious hut with a trader standing behind a counter.\nThe entire room is filled with treasures, such as weapons, masks or jewelry",
-      "visited": 0,
-      "altDescription": ""
+      "altDescription": "",
+      "visited": 0
     },
     {
       "ways": [
@@ -359,6 +376,7 @@
           "to": "Village Center",
           "name": "exit door to the village center",
           "description": "a wide door closed by curtains",
+          "altDescription": "",
           "isFree": true
         },
         {
@@ -367,6 +385,7 @@
           "to": "Cave entrance",
           "name": "a secret hatch leading into the cave",
           "description": "a hatch is hidden behind a curtain, which leads into a cave",
+          "altDescription": "",
           "isFree": true
         }
       ],
@@ -388,8 +407,8 @@
       ],
       "name": "Healers' Hut",
       "description": "a narrow hut with a stretcher in the center.\nA wounded man lies on the stretcher. Next to the person is a concerned resident who is treating the wounds.\nAll around him are shelves with jars containing colored liquids",
-      "visited": 0,
-      "altDescription": ""
+      "altDescription": "",
+      "visited": 0
     },
     {
       "ways": [
@@ -408,6 +427,7 @@
           "to": "Healers' Hut",
           "name": "a small path",
           "description": "It is a small path. In the distance I can see a village.",
+          "altDescription" : "",
           "isFree": true
         },
         {
@@ -416,12 +436,14 @@
           "to": "cliff wall",
           "name": "rocky path",
           "description": "It is a rocky path along the cliff.",
+          "altDescription" : "",
           "isFree": true
         }
       ],
       "items": [],
       "name": "Cave entrance",
       "description": "It is a clearing in front of the cliffs. You can see a dark passage, which seems to lead in a cave.",
+      "altDescription" : "",
       "visited": 0
     },
     {
@@ -432,6 +454,7 @@
           "to": "Cave entrance",
           "name": "small cave passage",
           "description": "It is a small, pretty dark passage, leading outside of the cave.",
+          "altDescription" : "",
           "isFree": true
         },
         {
@@ -440,7 +463,7 @@
           "to": "treasure cave",
           "name": "wooden door",
           "description": "There is an open door",
-          "altDescription": "There is a closed door. But it doesn´t look very stable...",
+          "altDescription": "There is a closed door. But it doesn't look very stable...",
           "isFree": false
         },
         {
@@ -465,6 +488,7 @@
       ],
       "name": "cave fork",
       "description": "The cave splits in two ways.",
+      "altDescription" : "",
       "visited": 0
     },
     {
@@ -475,6 +499,7 @@
           "to": "cave fork",
           "name": "wooden door",
           "description": "The wooden door is open now.",
+          "altDescription" : "",
           "isFree": true
         }
       ],
@@ -490,6 +515,7 @@
       "name": "treasure cave",
       "enable" : "on machete",
       "description": "There are a lot of cobwebs all around. I can barely see anything.",
+      "altDescription" : "There is a small room with some things on the floor.",
       "visited": 0
     },
     {
@@ -500,6 +526,7 @@
           "to": "cave fork",
           "name": "a small passage",
           "description": "Small passage, which leads out of the cave. Hopefully it will not break in.",
+          "altDescription" : "",
           "isFree": true
         }
       ],
@@ -514,6 +541,7 @@
       ],
       "name": "boss cave",
       "description": "There is a big bear in this room. The bear holds a two-way radio in his hands. I need to fight him to get it.",
+      "altDescription" : "There is the dead body of the bear on the floor.",
       "visited": 0
     },
     {
