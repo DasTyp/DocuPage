@@ -3,6 +3,7 @@ package zork;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Inventory {
 
@@ -100,9 +101,20 @@ public class Inventory {
         else{
             for(Item i : storedItems){
                 System.out.print(i.getName()+" ("+i.getDescription()+")");
+                System.out.println();
             }
-            System.out.println();
+
         }
     }
 
+
+    /**
+     * mirrors itemlist for rooms.
+     * @author Christian Litke
+     * @return list object of stored items
+     */
+    public List<Item> getInventoryList()
+    {
+        return storedItems;
+    }
 }
