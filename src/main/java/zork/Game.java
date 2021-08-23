@@ -10,20 +10,32 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
+/**
+ * This class processes user input and controls the hole game
+ */
 public class Game
 {
+    /**
+     * Contains the players data
+     */
     Player player;
 
+    /**
+     * List of all rooms in this game
+     */
     @SerializedName("rooms")
     List<Room> rooms;
 
-    // Main playing method with the possible commands and their method call
+    /**
+     * Main playing method that processes user input, filters possible commands and calls the related methods
+     * @param player The current player in the game
+     */
     public void play(Player player)
     {
         Scanner userInput = new Scanner(System.in);
         this.player = player;
 
+        System.out.println(Constants.INTRO_TEXT);
         Map map; //Declaration of the Map
 
         System.out.println("welcome to the zork game.");
@@ -41,6 +53,19 @@ public class Game
 
             if (input.matches("help|info")) {
                 System.out.println("Available commands: " + Constants.COMMAND_LIST);
+            }
+            // hidden warp command
+            else if (input.matches("warp|warp (.+)"))
+            {
+                if (input.matches("warp (.+)")) {
+                    String roomName = input.replace("warp ", "");
+                    player.setRoomName(roomName);
+                    System.out.println(getCurrentRoom());
+                    System.out.println(getCurrentRoom().getDescription());
+                }
+                else {
+                    System.out.println("You have to say which room you want to warp to.");
+                }
             }
             else if (input.matches("inventory|show inventory")) {
                 player.inventory.show();
@@ -112,7 +137,11 @@ public class Game
         }
     }
 
-    // Look method: shows for the current room: all available items and all available ways
+    /**
+     * Shows information about all ways, things and available items in current room when looking around or
+     * shows information about the way for given direction
+     * @param lookingAt The direction the player is looking at
+     */
     public void look(String lookingAt)
     {
         // Boolean that indicates if the command "look around" has been written
@@ -135,7 +164,8 @@ public class Game
             //Show available ways in the current room
             for (Way way : getCurrentRoom().getRoomWayList())
             {
-                System.out.println("there is a " + way.getName() + " going " + way.getDirection() + ". ");
+                String wayDescription = way.isFree() ? way.getDescription() : way.getAltDescription();
+                System.out.println("there is a " + way.getName() + " going " + way.getDirection() + ". " + wayDescription);
             }
             //Show available items in the current room
             if (getCurrentRoom().getRoomItemList() != null)
@@ -150,11 +180,15 @@ public class Game
         // Entered phrase is "look + valid direction": show way for the selected direction
         else {
             Way resultWay = getWayForDirection(lookingAt);
-            System.out.println("there is a " + resultWay.getName() + " going " + lookingAt + ".");
+            String wayDescription = resultWay.isFree() ? resultWay.getDescription() : resultWay.getAltDescription();
+            System.out.println("there is a " + resultWay.getName() + " going " + lookingAt + ". " + wayDescription);
         }
     }
 
-    // Move method: moves in the chosen direction if it's a valid direction and if there's a way in this direction
+    /**
+     * Moves in the given direction if it's a valid direction and the way is not blocked
+     * @param direction The direction the player wants to move
+     */
     public void move(String direction)
     {
         if (!isProperInput(direction, Constants.DIRECTIONS)) {
@@ -170,7 +204,13 @@ public class Game
             Way resultWay = getWayForDirection(direction);
             System.out.println("you're taking the " + resultWay.getName() + " " + direction + ". ");
             player.setRoomName(resultWay.getTo());
-            System.out.println(getCurrentRoom() + " It's " + getCurrentRoom().getDescription() + ".");
+            Room resultRoom = getCurrentRoom();
+            String description = resultRoom.getDescription();
+            if (resultRoom.getVisited() >= 1) {
+                description = resultRoom.getAltDescription();
+            }
+            System.out.println(resultRoom + " It's " + description + ".");
+            resultRoom.incrementVisited();
         }
     }
 
@@ -266,7 +306,11 @@ public class Game
         return foundItem;
     }
 
-    // Helper method: Checks if a given string is contained in a given list
+    /**
+     * Helper method: Checks if a given string is contained in a given list
+     * @param input Given input that has to be checked if it's proper
+     * @param properInput List of proper input
+     */
     private boolean isProperInput(String input, List<String> properInput)
     {
         if (properInput.contains(input)) {
@@ -277,7 +321,9 @@ public class Game
         }
     }
 
-    // Helper method: Checks if the current room has ways
+    /**
+     * Helper method: Checks if the current room has ways
+     */
     private boolean hasWays()
     {
         if (getCurrentRoom().getRoomWayList().size() == 0) {
@@ -288,7 +334,11 @@ public class Game
         }
     }
 
-    // Helper method: Returns the way in the given direction if available (otherwise the way is null)
+    /**
+     * Helper method: Returns the way in the given direction if available (otherwise the way is null)
+     * @param direction Given direction for looking for ways
+     * @return Way if there's a way in the given direction, otherwise return null
+     */
     private Way getWayForDirection(String direction)
     {
         Way resultWay = null;
@@ -303,7 +353,9 @@ public class Game
         return resultWay;
     }
 
-    // Helper method: Returns the current room object
+    /**
+     * Helper method: Returns the current room
+     */
     private Room getCurrentRoom()
     {
         Room currentRoom = null;
