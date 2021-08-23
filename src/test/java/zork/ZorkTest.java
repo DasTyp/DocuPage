@@ -6,6 +6,9 @@ import org.junit.jupiter.api.Test;
 public class ZorkTest
 {
 
+    /**
+     * Example unit test for Zork class
+     */
     @Test
     public void parseData()
     {

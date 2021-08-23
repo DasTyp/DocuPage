@@ -1,1 +1,217 @@
-{"player":{"name":"hugo","points":0,"strength":100,"where":"cellar4"},"rooms":[{"ways":[{"direction":"north","from":"entrance to the house","to":"hall","name":"door","description":"a glass door with frosted glass"}],"items":[{"strength":0,"where":"is lying on the ground","name":"key","description":"a large, rusty key ring"},{"strength":1,"where":"is lying in the corner","name":"pocket lamp","description":"a big flashlight that lights a whole room up"}],"name":"entrance to the house","description":"this is where the game starts. type help for guidance."},{"ways":[{"direction":"up","from":"hall","to":"attic","name":"stairway","description":"it looks dusty and unstable."},{"direction":"east","from":"hall","to":"living room","name":"door","description":"heavy door made from solid oak with nails on the bars"},{"direction":"south","from":"hall","to":"entrance to the house","name":"door","description":"a glass door with frosted glass"}],"items":[{"strength":0,"where":"is lying on the floor","name":"briefcase","description":"an empty briefcase"},{"strength":5,"where":"is lying in the corner","name":"pocket knife","description":"a swiss army multi function pocket knife including USB stick"}],"name":"hall","description":"a large dark room stuffed with oak furniture"},{"ways":[{"direction":"down","from":"attic","to":"hall","name":"stairway","description":"it looks dusty and unstable."}],"items":[{"strength":0,"where":"is lying in the corner of the attic","name":"rope","description":"an old pile of rope"},{"strength":15,"where":"is lying in the corner and was hidden by the rope","name":"sword","description":"a long shiny sword"}],"name":"attic","description":"dusty dusty in here ..."},{"ways":[{"direction":"down","from":"living room","to":"cellar","name":"trap door","description":"cast iron trap door"},{"direction":"west","from":"living room","to":"hall","name":"door","description":"heavy door made from solid oak with nails on the bars"}],"items":[{"strength":0,"where":"is in the middle of the room","name":"carpet","description":"an old oriental carpet"}],"name":"living room","description":"the living room of the house"},{"ways":[{"direction":"east","from":"cellar","to":"cellar2","name":"door","description":"leaning door"},{"direction":"up","from":"cellar","to":"living room","name":"trap door","description":"cast iron trap door"}],"items":[],"name":"cellar","description":"a cold and humid cellar. it\u0027s absolutely dark, you can\u0027t see anything."},{"ways":[{"direction":"down","from":"cellar2","to":"cellar3","name":"door","description":"leaning door"},{"direction":"west","from":"cellar2","to":"cellar","name":"door","description":"leaning door"}],"items":[],"name":"cellar2","description":"A dark empty room."},{"ways":[{"direction":"west","from":"cellar3","to":"cellar4","name":"door","description":"leaning door"},{"direction":"up","from":"cellar3","to":"cellar2","name":"door","description":"leaning door"}],"items":[],"name":"cellar3","description":"an empty dark room"},{"ways":[{"direction":"north","from":"cellar4","to":"cellar","name":"door","description":"a slippery ramp made from solid wood"},{"direction":"east","from":"cellar4","to":"cellar3","name":"door","description":"leaning door"}],"items":[],"name":"cellar4","description":"a large dirty room, full of old furniture."}]}
+{
+  "player": {
+    "name": "hugo",
+    "points": 0,
+    "strength": 100,
+    "where": "cellar4"
+  },
+  "rooms": [
+    {
+      "ways": [
+        {
+          "direction": "north",
+          "from": "entrance to the house",
+          "to": "hall",
+          "name": "door",
+          "description": "a glass door with frosted glass"
+        }
+      ],
+      "items": [
+        {
+          "strength": 0,
+          "where": "is lying on the ground",
+          "name": "key",
+          "description": "a large, rusty key ring"
+        },
+        {
+          "strength": 1,
+          "where": "is lying in the corner",
+          "name": "pocket lamp",
+          "description": "a big flashlight that lights a whole room up"
+        }
+      ],
+      "name": "entrance to the house",
+      "description": "this is where the game starts. type help for guidance."
+    },
+    {
+      "ways": [
+        {
+          "direction": "up",
+          "from": "hall",
+          "to": "attic",
+          "name": "stairway",
+          "description": "it looks dusty and unstable."
+        },
+        {
+          "direction": "east",
+          "from": "hall",
+          "to": "living room",
+          "name": "door",
+          "description": "heavy door made from solid oak with nails on the bars"
+        },
+        {
+          "direction": "south",
+          "from": "hall",
+          "to": "entrance to the house",
+          "name": "door",
+          "description": "a glass door with frosted glass"
+        }
+      ],
+      "items": [
+        {
+          "strength": 0,
+          "where": "is lying on the floor",
+          "name": "briefcase",
+          "description": "an empty briefcase"
+        },
+        {
+          "strength": 5,
+          "where": "is lying in the corner",
+          "name": "pocket knife",
+          "description": "a swiss army multi function pocket knife including USB stick"
+        }
+      ],
+      "name": "hall",
+      "description": "a large dark room stuffed with oak furniture"
+    },
+    {
+      "ways": [
+        {
+          "direction": "down",
+          "from": "attic",
+          "to": "hall",
+          "name": "stairway",
+          "description": "it looks dusty and unstable."
+        }
+      ],
+      "items": [
+        {
+          "strength": 0,
+          "where": "is lying in the corner of the attic",
+          "name": "rope",
+          "description": "an old pile of rope"
+        },
+        {
+          "strength": 15,
+          "where": "is lying in the corner and was hidden by the rope",
+          "name": "sword",
+          "description": "a long shiny sword"
+        }
+      ],
+      "name": "attic",
+      "description": "dusty dusty in here ..."
+    },
+    {
+      "ways": [
+        {
+          "direction": "down",
+          "from": "living room",
+          "to": "cellar",
+          "name": "trap door",
+          "description": "cast iron trap door"
+        },
+        {
+          "direction": "west",
+          "from": "living room",
+          "to": "hall",
+          "name": "door",
+          "description": "heavy door made from solid oak with nails on the bars"
+        }
+      ],
+      "items": [
+        {
+          "strength": 0,
+          "where": "is in the middle of the room",
+          "name": "carpet",
+          "description": "an old oriental carpet"
+        }
+      ],
+      "name": "living room",
+      "description": "the living room of the house"
+    },
+    {
+      "ways": [
+        {
+          "direction": "east",
+          "from": "cellar",
+          "to": "cellar2",
+          "name": "door",
+          "description": "leaning door"
+        },
+        {
+          "direction": "up",
+          "from": "cellar",
+          "to": "living room",
+          "name": "trap door",
+          "description": "cast iron trap door"
+        }
+      ],
+      "items": [],
+      "name": "cellar",
+      "description": "a cold and humid cellar. it\u0027s absolutely dark, you can\u0027t see anything."
+    },
+    {
+      "ways": [
+        {
+          "direction": "down",
+          "from": "cellar2",
+          "to": "cellar3",
+          "name": "door",
+          "description": "leaning door"
+        },
+        {
+          "direction": "west",
+          "from": "cellar2",
+          "to": "cellar",
+          "name": "door",
+          "description": "leaning door"
+        }
+      ],
+      "items": [],
+      "name": "cellar2",
+      "description": "A dark empty room."
+    },
+    {
+      "ways": [
+        {
+          "direction": "west",
+          "from": "cellar3",
+          "to": "cellar4",
+          "name": "door",
+          "description": "leaning door"
+        },
+        {
+          "direction": "up",
+          "from": "cellar3",
+          "to": "cellar2",
+          "name": "door",
+          "description": "leaning door"
+        }
+      ],
+      "items": [],
+      "name": "cellar3",
+      "description": "an empty dark room"
+    },
+    {
+      "ways": [
+        {
+          "direction": "north",
+          "from": "cellar4",
+          "to": "cellar",
+          "name": "door",
+          "description": "a slippery ramp made from solid wood"
+        },
+        {
+          "direction": "east",
+          "from": "cellar4",
+          "to": "cellar3",
+          "name": "door",
+          "description": "leaning door"
+        }
+      ],
+      "items": [],
+      "name": "cellar4",
+      "description": "a large dirty room, full of old furniture."
+    }
+  ]
+}
