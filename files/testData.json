@@ -17,7 +17,8 @@
           "from": "test room 1",
           "to": "test room 2",
           "name": "door",
-          "description": "a door"
+          "description": "a door",
+          "isFree" : true
         }
       ],
       "items": [

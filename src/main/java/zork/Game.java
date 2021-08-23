@@ -200,6 +200,9 @@ public class Game
         else if (getWayForDirection(direction) == null) {
             System.out.println("you can't move in this direction.");
         }
+        else if (!getWayForDirection(direction).isFree()) {
+            System.out.println("The " + getWayForDirection(direction).getName() + " is currently blocked, you can't move in this direction until you find a way to unlock it. " + getWayForDirection(direction).getDescription());
+        }
         else {
             Way resultWay = getWayForDirection(direction);
             System.out.println("you're taking the " + resultWay.getName() + " " + direction + ". ");
