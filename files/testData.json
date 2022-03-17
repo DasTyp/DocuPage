@@ -1,0 +1,77 @@
+{
+  "player": {
+    "points": 0,
+    "strength": 100,
+    "name": "hugo",
+    "where": "test room 1",
+    "inventory": {
+      "maxSize": 10,
+      "storedItems": []
+    },
+    "health": {
+      "value": 100,
+      "maxValue": 100
+    },
+    "hunger": {
+      "value": 50,
+      "maxValue": 100
+    },
+    "thirst": {
+      "value": 25,
+      "maxValue": 100
+    }
+  },
+  "rooms": [
+    {
+      "ways": [
+        {
+          "direction": "east",
+          "from": "test room 1",
+          "to": "test room 2",
+          "name": "door",
+          "description": "a door",
+          "isFree" : true
+        }
+      ],
+      "items": [
+        {
+          "strength": 0,
+          "name": "key",
+          "description": "key description",
+          "where": "key position",
+          "state": "removable"
+        }
+      ],
+      "nonItems" : [],
+      "animals" : [],
+      "enemies" : [],
+      "name": "test room 1",
+      "description": "bla"
+    },
+    {
+      "ways": [
+        {
+          "direction": "west",
+          "from": "test room 2",
+          "to": "test room 1",
+          "name": "gate",
+          "description": "a gate"
+        }
+      ],
+      "items": [
+        {
+          "strength": 0,
+          "name": "berry",
+          "description": "berry description",
+          "where": "berry position",
+          "state": "fixed"
+        }
+      ],
+      "nonItems" : [],
+      "animals" : [],
+      "enemies" : [],
+      "name": "test room 2",
+      "description": "blubb"
+    }
+  ]
+}

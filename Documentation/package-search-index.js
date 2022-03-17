@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"communication"},{"l":"controller"},{"l":"view"},{"l":"view.mocks"},{"l":"zork"}];updateSearchResults();

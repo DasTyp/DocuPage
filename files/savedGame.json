@@ -1,0 +1,1040 @@
+{
+  "player": {
+    "inventory": {
+      "maxSize": 10,
+      "storedItems": []
+    },
+    "health": {
+      "value": 100,
+      "minValue": 0,
+      "maxValue": 100
+    },
+    "hunger": {
+      "value": 50,
+      "minValue": 0,
+      "maxValue": 100
+    },
+    "thirst": {
+      "value": 25,
+      "minValue": 0,
+      "maxValue": 100
+    },
+    "maxInventorySize": 10,
+    "name": "hugo",
+    "points": 0,
+    "strength": 100,
+    "where": "middle beach"
+  },
+  "healthWarning": true,
+  "hungerWarning": true,
+  "thirstWarning": true,
+  "difficulty": 1,
+  "actionHandler": {
+    "spearTries": 0
+  },
+  "rooms": [
+    {
+      "visited": 0,
+      "altDescription": "",
+      "ways": [
+        {
+          "direction": "north",
+          "from": "island",
+          "to": "eastern beach",
+          "isFree": true,
+          "altDescription": "The water is shallow enough to wade through, but a great white shark is swimming here. ",
+          "name": "way through shallow water to the main island",
+          "description": "The water is shallow enough to wade through. "
+        }
+      ],
+      "items": [
+        {
+          "state": "removable",
+          "strength": 25,
+          "where": "is stuck in a pile of stones",
+          "name": "machete",
+          "description": "big and sharp enough to be used as a weapon"
+        },
+        {
+          "state": "removable",
+          "strength": 0,
+          "where": "is lying next to a closed suitcase",
+          "name": "flute",
+          "description": "for entertainment only or also as a distraction like in movies?"
+        }
+      ],
+      "nonItems": [
+        {
+          "state": "fixed",
+          "where": "is swimming in the shallow water around the island",
+          "necessaryItem": "fishing rod",
+          "containedItems": [
+            {
+              "state": "removable",
+              "strength": 10,
+              "where": "is swimming in between hundreds os fish",
+              "name": "fish",
+              "description": "looks fresh and edible"
+            }
+          ],
+          "command": "use with",
+          "name": "fish swarm",
+          "description": ""
+        },
+        {
+          "state": "fixed",
+          "where": "is lying in the sand",
+          "necessaryItem": "note",
+          "containedItems": [
+            {
+              "state": "removable",
+              "strength": 5,
+              "where": "is on top of all other things in the suitcase",
+              "name": "rucksack",
+              "description": "it\u0027s useless when lying in your inventory, use it!"
+            },
+            {
+              "state": "removable",
+              "strength": 0,
+              "where": "is half way buried on the beach",
+              "name": "sea shell",
+              "description": "looking so beautiful, it\u0027s almost mystic"
+            },
+            {
+              "state": "removable",
+              "strength": 0,
+              "where": "is in a small pocket of the suitcase",
+              "name": "key",
+              "description": "you can always use a key, maybe it is even the key to victory"
+            },
+            {
+              "state": "removable",
+              "strength": 0,
+              "where": "is in the suitcase",
+              "name": "empty bottle",
+              "description": "can be used to carry water with you and drink the water later. Try to \"take water\"!"
+            }
+          ],
+          "command": "use with",
+          "name": "suitcase",
+          "description": "It\u0027s in good condition and certainly comes from one of the airplane passengers.\nUnfortunately it\u0027s secured with an intact combination lock, you won\u0027t be able to open it without that code."
+        }
+      ],
+      "animals": [],
+      "enemies": [],
+      "name": "island",
+      "description": "a tiny island with a small jungle in the middle and beach around it. There are some fish swimming in the eastern ocean.\nUnfortunately the great white shark is back in the shallow water between the main island and this little one.\nSeems to be his favourite place..."
+    },
+    {
+      "visited": 0,
+      "altDescription": "a flat sandy beach continuing to east with dense jungle in the north and flooted mangroves in the west.\nIn the south lies a tiny island across the shallow ocean. A great white shark draws its circles there,\nit doesn\u0027t seem like it\u0027s going to move away.\nThere\u0027s a path into the jungle, but something big is lying in the shadows there..",
+      "ways": [
+        {
+          "direction": "north",
+          "from": "eastern beach",
+          "to": "jungle glade",
+          "isFree": false,
+          "altDescription": "The path seems to lead somewhere, but a crocodile is lying on it.",
+          "name": "path into the jungle",
+          "description": "The path seems to lead deep into the jungle."
+        },
+        {
+          "direction": "south",
+          "from": "eastern beach",
+          "to": "island",
+          "isFree": false,
+          "altDescription": "The water is shallow enough to wade through, but a great white shark is swimming here. ",
+          "name": "way through shallow water to the tiny island",
+          "description": "The water is shallow enough to wade through. "
+        },
+        {
+          "direction": "west",
+          "from": "eastern beach",
+          "to": "middle beach",
+          "isFree": true,
+          "altDescription": "",
+          "name": "sandy way",
+          "description": ""
+        }
+      ],
+      "items": [
+        {
+          "state": "removable",
+          "strength": 0,
+          "where": "is lying on the beach. It got washed ashore after you lost it in the ocean",
+          "name": "rope",
+          "description": "many meters of intact ropes from your parachute"
+        }
+      ],
+      "nonItems": [],
+      "animals": [
+        {
+          "isHungry": true,
+          "state": "removable",
+          "where": "is swimming in the shallow water",
+          "necessaryItem": "fish",
+          "containedItems": [],
+          "command": "feed with",
+          "name": "shark",
+          "description": "It looks like the shark is hunting here, maybe it needs only a fishy snack und he\u0027s going for a nap."
+        },
+        {
+          "isHungry": true,
+          "state": "removable",
+          "where": "is lurking in the shadows on the jungle path",
+          "necessaryItem": "meat",
+          "containedItems": [],
+          "command": "feed with",
+          "name": "crocodile",
+          "description": "It\u0027s huge and looks kinda hungry.\nMake sure that it gets something meaty between its teeth or better run off!"
+        }
+      ],
+      "enemies": [],
+      "name": "eastern beach",
+      "description": "a flat sandy beach continuing to east with dense jungle in the north and flooted mangroves in the west.\nIn the south lies a tiny island across the shallow ocean with a shiny, metallic looking object on it.\nA great white shark draws its circles there, it doesn\u0027t seem like it\u0027s going to move away"
+    },
+    {
+      "visited": 0,
+      "altDescription": "",
+      "ways": [
+        {
+          "direction": "east",
+          "from": "middle beach",
+          "to": "eastern beach",
+          "isFree": true,
+          "altDescription": "",
+          "name": "sandy way",
+          "description": ""
+        },
+        {
+          "direction": "west",
+          "from": "middle beach",
+          "to": "western beach",
+          "isFree": true,
+          "altDescription": "",
+          "name": "sandy way",
+          "description": ""
+        }
+      ],
+      "items": [],
+      "nonItems": [
+        {
+          "state": "fixed",
+          "where": "is swimming in the shallow water",
+          "necessaryItem": "fishing rod",
+          "containedItems": [
+            {
+              "state": "removable",
+              "strength": 5,
+              "where": "is swimming between hundreds of fish",
+              "name": "fish",
+              "description": "looks fresh and edible"
+            }
+          ],
+          "command": "use with",
+          "name": "fish swarm",
+          "description": ""
+        },
+        {
+          "state": "fixed",
+          "where": "with lots of coconuts is standing between many other palms",
+          "necessaryItem": "spear",
+          "containedItems": [
+            {
+              "state": "removable",
+              "strength": 15,
+              "where": "is lying on the ground",
+              "name": "coconut",
+              "description": "eat raw or cook in meal?"
+            }
+          ],
+          "command": "use with",
+          "name": "coconut palm",
+          "description": "You can not climb the trunk, but you could try to throw something at the fruits."
+        }
+      ],
+      "animals": [],
+      "enemies": [],
+      "name": "middle beach",
+      "description": "a long, flat sandy beach continuing to east and west with dense jungle and some palms in the north. \nTo the south lies the endless sea with large schools of fish in the shallow water"
+    },
+    {
+      "visited": 0,
+      "altDescription": "a long, flat sandy beach continuing to the east with dense palm forest in the north and high cliffs to the west. \nA small sandy trail seems to lead into the forest, but it\u0027s overgrown with a thorny bush. A wide river separates beach and cliffs.\nThe front half of the broken plane is hanging on the cliffs. It looks almost unharmed, like there could be intact technical devices in there",
+      "ways": [
+        {
+          "direction": "east",
+          "from": "western beach",
+          "to": "middle beach",
+          "isFree": true,
+          "altDescription": "",
+          "name": "sandy way",
+          "description": ""
+        },
+        {
+          "direction": "north",
+          "from": "western beach",
+          "to": "palm forest",
+          "isFree": false,
+          "altDescription": "It\u0027s a wind swept trail leading into the palm forest. It\u0027s overgrown with a dense thorny bush,\nthere\u0027s definitely no way through this without getting seriously hurt.",
+          "name": "sandy trail into the palm forest",
+          "description": "It\u0027s a wind swept trail leading into the palm forest."
+        }
+      ],
+      "items": [
+        {
+          "state": "removable",
+          "strength": 0,
+          "where": "is lying on the shore. So close to the water, it will surely be washed away soon",
+          "name": "fishing rod",
+          "description": "can be used to catch fish"
+        },
+        {
+          "state": "fixed",
+          "strength": 5,
+          "where": "is running from the river into the sea",
+          "name": "water",
+          "description": "will fill up your thirst level when you drink it"
+        }
+      ],
+      "nonItems": [
+        {
+          "state": "removable",
+          "where": "grows on the jungle path and blocks it completely",
+          "necessaryItem": "machete",
+          "containedItems": [],
+          "command": "use with",
+          "name": "thorny bush",
+          "description": ""
+        }
+      ],
+      "animals": [],
+      "enemies": [],
+      "name": "western beach",
+      "description": "a long, flat sandy beach continuing to the east with dense palm forest in the north and high cliffs to the west. \nA small sandy trail seems to lead into the forest, but it\u0027s overgrown with a thorny bush. A wide river separates beach and cliffs.\nThe front half of the broken plane is hanging on the cliffs. It looks almost unharmed, like there could be intact technical devices in there.\nThe pilot surely owned a mobile two-way radio for emergency reasons.."
+    },
+    {
+      "visited": 0,
+      "altDescription": "",
+      "ways": [
+        {
+          "direction": "south",
+          "from": "palm forest",
+          "to": "western beach",
+          "isFree": true,
+          "altDescription": "The path seems to lead somewhere, but a crocodile is lying on it.\nIt\u0027s huge and looks kinda hungry, you can\u0027t take that way as long as it lies there. ",
+          "name": "sandy trail",
+          "description": "A wind swept trail leading to the beach."
+        },
+        {
+          "direction": "east",
+          "from": "palm forest",
+          "to": "dense jungle",
+          "isFree": true,
+          "name": "A trail",
+          "description": "an animal trail leading towards the wilds."
+        },
+        {
+          "direction": "west",
+          "from": "palm forest",
+          "to": "cliff coast",
+          "isFree": true,
+          "name": "a gravel path",
+          "description": "At the end of this gravel path you can see the cliffs."
+        }
+      ],
+      "items": [],
+      "nonItems": [],
+      "animals": [],
+      "name": "palm forest",
+      "description": "A forest of shrubbery and palm trees. Watch out for thorns"
+    },
+    {
+      "visited": 0,
+      "altDescription": "",
+      "ways": [
+        {
+          "direction": "north",
+          "from": "dense jungle",
+          "to": "sparse jungle",
+          "isFree": true,
+          "name": "cleared path",
+          "description": "You can see footsteps on this path! There must be other people."
+        },
+        {
+          "direction": "west",
+          "from": "dense jungle",
+          "to": "palm forest",
+          "isFree": true,
+          "name": "a trail",
+          "description": "An animal trail leading towards the ocean."
+        },
+        {
+          "direction": "east",
+          "from": "dense jungle",
+          "to": "jungle glade",
+          "isFree": true,
+          "name": "animal trail",
+          "description": "A well worn trail, it must have seen much use."
+        }
+      ],
+      "items": [],
+      "nonItems": [
+        {
+          "state": "fixed",
+          "where": " grows here",
+          "necessaryItem": "rope",
+          "containedItems": [
+            {
+              "state": "fixed",
+              "strength": 15,
+              "where": "is ready to be plucked",
+              "name": "banana",
+              "description": "a huge banana, perfect for a snack on the go. It smells amazing."
+            }
+          ],
+          "command": "use with",
+          "name": "banana tree",
+          "description": "It has a bountiful harvest of bananas growing under it\u0027s crown high above.\nThe low hanging branches have been worn away by animals or the weather.\nYou\u0027ll have to find something to help you climb up if you want to reach them."
+        }
+      ],
+      "animals": [],
+      "enemies": [],
+      "name": "dense jungle",
+      "description": "there\u0027s barely any light reaching you through the dense canopy. You can hear birdsong"
+    },
+    {
+      "visited": 0,
+      "altDescription": "",
+      "ways": [
+        {
+          "direction": "south",
+          "from": "jungle glade",
+          "to": "eastern beach",
+          "isFree": true,
+          "altDescription": "The path is overgrown with a dense thorny bush, there\u0027s definitely no way through this without getting seriously hurt.",
+          "name": "a path",
+          "description": "It\u0027s barely visible, but you can make your way through the trees south."
+        },
+        {
+          "direction": "west",
+          "from": "jungle glade",
+          "to": "dense jungle",
+          "isFree": true,
+          "name": "an animal trail",
+          "description": "A well worn trail, it must have seen much use."
+        }
+      ],
+      "items": [
+        {
+          "state": "fixed",
+          "strength": 0,
+          "where": "on a bush",
+          "name": "berries",
+          "description": "Suspicious red berries"
+        }
+      ],
+      "nonItems": [],
+      "animals": [],
+      "name": "jungle glade",
+      "description": "A clearing in the jungle, full of life."
+    },
+    {
+      "visited": 0,
+      "altDescription": "",
+      "ways": [
+        {
+          "direction": "north",
+          "from": "sparse jungle",
+          "to": "village center",
+          "isFree": true,
+          "name": "path",
+          "description": "A wandering path, you can spot human usage."
+        },
+        {
+          "direction": "south",
+          "from": "sparse jungle",
+          "to": "dense jungle",
+          "isFree": true,
+          "name": "cleared path",
+          "description": "It\u0027s a path that has been hacked through the jungle."
+        }
+      ],
+      "items": [],
+      "nonItems": [
+        {
+          "state": "fixed",
+          "where": "between fallen leaves",
+          "necessaryItem": "",
+          "containedItems": [
+            {
+              "state": "trackable",
+              "strength": 0,
+              "where": "in your brain",
+              "name": "0",
+              "description": "Interacted with the first pawprint"
+            }
+          ],
+          "command": "track",
+          "name": "paw print",
+          "description": "There\u0027s fresh prints of a bunny leading to the south.\nYou can also spot a line dragged into the dirt. Is the bunny carrying something? Start tracking!"
+        }
+      ],
+      "animals": [],
+      "enemies": [],
+      "name": "sparse jungle",
+      "description": "the trees become smaller and less dense. In the distance you can hear drums."
+    },
+    {
+      "visited": 0,
+      "altDescription": "",
+      "ways": [
+        {
+          "direction": "south",
+          "from": "village center",
+          "to": "sparse jungle",
+          "isFree": true,
+          "altDescription": "",
+          "name": "path back to the jungle",
+          "description": "A wandering path, you can spot human usage."
+        },
+        {
+          "direction": "north",
+          "from": "village center",
+          "to": "traders hut",
+          "isFree": true,
+          "altDescription": "",
+          "name": "entrance to the traders hut",
+          "description": "A door that leads to the inside of a hut, which looks like a kind of market."
+        },
+        {
+          "direction": "east",
+          "from": "village center",
+          "to": "mystic hut",
+          "isFree": true,
+          "altDescription": "",
+          "name": "entrance to a mysterious looking hut",
+          "description": "A door which is decorated with bones and skulls and greenish smoke rises from the mysterious black hut."
+        },
+        {
+          "direction": "west",
+          "from": "village center",
+          "to": "healers hut",
+          "isFree": true,
+          "altDescription": "",
+          "name": "entrance to the healers hut",
+          "description": "A door into a large hut which seems to belong to the healer."
+        }
+      ],
+      "items": [
+        {
+          "state": "removable",
+          "strength": 2,
+          "where": "leans against a tree stump",
+          "name": "spear",
+          "description": "a very long spear. Definitely not the best weapon but you can reach far away things with it."
+        }
+      ],
+      "nonItems": [
+        {
+          "where": "is mounted over the campfire",
+          "necessaryItem": "empty jar",
+          "containedItems": [],
+          "command": "use with",
+          "name": "cauldron",
+          "description": "It\u0027s a large bronze cauldron for cooking."
+        }
+      ],
+      "animals": [],
+      "enemies": [],
+      "name": "village center",
+      "description": "a large place between three huts. In the middle there is a campfire.\nSpread around the place are some locals who look at you skeptically."
+    },
+    {
+      "visited": 0,
+      "altDescription": "",
+      "ways": [
+        {
+          "direction": "west",
+          "from": "mystic hut",
+          "to": "village center",
+          "isFree": true,
+          "altDescription": "",
+          "name": "exit to the village center",
+          "description": "A doorway decorated with bones leading back to the village center."
+        }
+      ],
+      "items": [],
+      "nonItems": [
+        {
+          "state": "fixed",
+          "where": "with several items lying around the fire",
+          "necessaryItem": "sea shell",
+          "containedItems": [
+            {
+              "state": "removable",
+              "strength": 5,
+              "where": "",
+              "name": "pickaxe",
+              "description": "can be used to break stone"
+            }
+          ],
+          "command": "use with",
+          "name": "ritual",
+          "description": "Around the fire lie various objects:\nfish bones, a starfish, seaweed and a pile of sand. It seems there is room for one more object."
+        }
+      ],
+      "animals": [],
+      "enemies": [],
+      "name": "mystic hut",
+      "description": "a dark hut, lit only by the flickering of a greenish campfire. Bones hang from the ceiling.\nA resident of the village drums and sings fanatically. Perhaps it is a ritual?\nAround the fire lie various objects: fish bones, a starfish, seaweed and a pile of sand. It seems there is room for one more object.."
+    },
+    {
+      "visited": 0,
+      "altDescription": "",
+      "ways": [
+        {
+          "direction": "south",
+          "from": "traders hut",
+          "to": "village center",
+          "isFree": true,
+          "altDescription": "",
+          "name": "guarded doorway back to the village center",
+          "description": "Next to the door are two residents armed with a spear. So you should not try to steal here."
+        }
+      ],
+      "items": [],
+      "nonItems": [],
+      "animals": [],
+      "enemies": [],
+      "name": "traders hut",
+      "description": "a spacious hut with a trader standing behind a counter.\nThe entire room is filled with treasures, such as weapons, masks or jewelry."
+    },
+    {
+      "visited": 0,
+      "altDescription": "",
+      "ways": [
+        {
+          "direction": "east",
+          "from": "healers hut",
+          "to": "village center",
+          "isFree": true,
+          "altDescription": "",
+          "name": "exit door to the village center",
+          "description": "A wide door closed by curtains."
+        },
+        {
+          "direction": "west",
+          "from": "healers hut",
+          "to": "cave entrance",
+          "isFree": true,
+          "altDescription": "",
+          "name": "a secret hatch leading into the cave",
+          "description": "A hatch is hidden behind a curtain, which leads into a cave."
+        }
+      ],
+      "items": [
+        {
+          "state": "removable",
+          "strength": 0,
+          "where": "on a stool next to the stretcher with the injured person",
+          "name": "handwritten recipe",
+          "description": "says: a mushroom, some berries and a coconut cooked together can work wonders..."
+        },
+        {
+          "state": "removable",
+          "strength": 0,
+          "where": "on a shelf next to many colorful filled jars",
+          "name": "empty jar",
+          "description": "an empty jar made of scratched glass"
+        }
+      ],
+      "nonItems": [
+        {
+          "where": "lies on a stretcher",
+          "necessaryItem": "healing potion",
+          "command": "use with",
+          "name": "survivor",
+          "description": "He is a wounded man that seems to be sleeping. Maybe he has some useful information? You have to find a way to heal him!"
+        }
+      ],
+      "animals": [],
+      "enemies": [],
+      "name": "healers hut",
+      "description": "a narrow hut with a stretcher in the center.\nA wounded man lies on the stretcher. Next to the person is a concerned resident who is treating the wounds.\nAll around him are shelves with jars containing colored liquids."
+    },
+    {
+      "visited": 0,
+      "altDescription": "",
+      "ways": [
+        {
+          "direction": "north",
+          "from": "cave entrance",
+          "to": "cave fork",
+          "isFree": false,
+          "altDescription": "It is a small, pretty dark passage, guarded by a big and poisonous snake, which you can not fight against, because it is to strong.",
+          "name": "small cave passage",
+          "description": "It is a small pretty dark passage. The snake is still distracted"
+        },
+        {
+          "direction": "east",
+          "from": "cave entrance",
+          "to": "healers hut",
+          "isFree": true,
+          "altDescription": "",
+          "name": "a small path",
+          "description": "It is a small path. In the distance I can see a village."
+        },
+        {
+          "direction": "west",
+          "from": "cave entrance",
+          "to": "cliff wall",
+          "isFree": true,
+          "altDescription": "",
+          "name": "rocky path",
+          "description": "It is a rocky path along the cliff."
+        }
+      ],
+      "items": [],
+      "nonItems": [],
+      "animals": [
+        {
+          "isHungry": false,
+          "state": "removable",
+          "where": "in front of the cave entrance",
+          "necessaryItem": "flute",
+          "containedItems": [],
+          "command": "use with",
+          "name": "snake",
+          "description": "A big and poisonous snake, which you cannot fight against, because it is to strong."
+        }
+      ],
+      "enemies": [],
+      "name": "cave entrance",
+      "description": "a clearing in front of the cliffs. You can see a dark passage, which seems to lead in a cave."
+    },
+    {
+      "visited": 0,
+      "altDescription": "",
+      "ways": [
+        {
+          "direction": "south",
+          "from": "cave fork",
+          "to": "cave entrance",
+          "isFree": true,
+          "altDescription": "",
+          "name": "small cave passage",
+          "description": "It is a small, pretty dark passage, leading outside of the cave."
+        },
+        {
+          "direction": "west",
+          "from": "cave fork",
+          "to": "treasure cave",
+          "isFree": true,
+          "altDescription": "",
+          "name": "wooden door",
+          "description": "There is a wooden door, which is cracked open."
+        },
+        {
+          "direction": "east",
+          "from": "cave fork",
+          "to": "boss cave",
+          "isFree": false,
+          "altDescription": "There is a cairn of stones in the way.",
+          "name": "a small passage",
+          "description": "Small passage, which leads deeper in the cave. Hopefully it will not break in."
+        }
+      ],
+      "items": [],
+      "nonItems": [
+        {
+          "state": "removable",
+          "where": "in the way",
+          "necessaryItem": "pickaxe",
+          "containedItems": [
+            {
+              "state": "removable",
+              "strength": 0,
+              "where": "",
+              "name": "stone",
+              "description": "A stone"
+            }
+          ],
+          "command": "use with",
+          "name": "cairn",
+          "description": "Maybe this pile of stones blocks a hidden tunnel."
+        }
+      ],
+      "animals": [],
+      "enemies": [],
+      "name": "cave fork",
+      "description": "a room, where the cave splits in two ways."
+    },
+    {
+      "visited": 0,
+      "altDescription": "",
+      "ways": [
+        {
+          "direction": "east",
+          "from": "treasure cave",
+          "to": "cave fork",
+          "isFree": true,
+          "altDescription": "",
+          "name": "wooden door",
+          "description": "The wooden door is open now."
+        }
+      ],
+      "items": [
+        {
+          "state": "removable",
+          "strength": 0,
+          "where": "at the edge of the room",
+          "name": "mushroom",
+          "description": "A big red mushroom. It seems poisonous."
+        }
+      ],
+      "nonItems": [],
+      "animals": [],
+      "enemies": [],
+      "name": "treasure cave",
+      "description": "a old room with a lot of chest, which have been opened. Looks like there was a treasure some time ago. But there was someone else faster."
+    },
+    {
+      "visited": 0,
+      "altDescription": "a bear den. There is the dead body of the bear on the floor.",
+      "ways": [
+        {
+          "direction": "west",
+          "from": "boss cave",
+          "to": "cave fork",
+          "isFree": true,
+          "altDescription": "",
+          "name": "a small passage",
+          "description": "Small passage, which leads out of the cave. Hopefully it will not break in."
+        }
+      ],
+      "items": [],
+      "nonItems": [],
+      "animals": [],
+      "enemies": [
+        {
+          "energy": {
+            "value": 200,
+            "minValue": 0,
+            "maxValue": 200
+          },
+          "state": "removable",
+          "where": "is standing in the center of the room",
+          "necessaryItem": "machete",
+          "containedItems": [
+            {
+              "state": "removable",
+              "strength": 0,
+              "where": "center of the room",
+              "name": "broken two-way radio",
+              "description": "A broken two-way radio. It does not work anymore. The bear has broken it."
+            }
+          ],
+          "command": "fight",
+          "name": "bear",
+          "description": "It\u0027s really big and has the the two-way radio."
+        }
+      ],
+      "name": "boss cave",
+      "description": "a bear den. The big bear is here in this room! The bear holds a two-way radio in his hands. You need to fight him to get it."
+    },
+    {
+      "visited": 0,
+      "altDescription": "",
+      "ways": [
+        {
+          "direction": "north",
+          "from": "cliff coast",
+          "to": "cliff wall",
+          "isFree": true,
+          "altDescription": "",
+          "name": "a way",
+          "description": "There is a small passage up the hills."
+        },
+        {
+          "direction": "east",
+          "from": "cliff coast",
+          "to": "palm forest",
+          "isFree": true,
+          "altDescription": "",
+          "name": "sandy path",
+          "description": "at the end of the sand path you can see the forest."
+        }
+      ],
+      "items": [],
+      "nonItems": [],
+      "animals": [],
+      "enemies": [],
+      "name": "cliff coast",
+      "description": "a small coast on the side of the island with a part of beach and the hills on the side."
+    },
+    {
+      "visited": 0,
+      "altDescription": "",
+      "ways": [
+        {
+          "direction": "north",
+          "from": "cliff wall",
+          "to": "ape horde",
+          "isFree": false,
+          "altDescription": "A small passage up the hills. Rocks are thrown in your direction by apes and can hit you. You should to distract them.",
+          "name": "a way",
+          "description": "A small passage up the hills. The apes are still distracted."
+        },
+        {
+          "direction": "south",
+          "from": "cliff wall",
+          "to": "cliff coast",
+          "isFree": true,
+          "altDescription": "",
+          "name": "a way",
+          "description": "A small passage down the hills."
+        },
+        {
+          "direction": "east",
+          "from": "cliff wall",
+          "to": "cave entrance",
+          "isFree": true,
+          "altDescription": "",
+          "name": "a way",
+          "description": "A small passage sideway the hills."
+        }
+      ],
+      "items": [],
+      "nonItems": [],
+      "animals": [
+        {
+          "isHungry": false,
+          "state": "removable",
+          "where": "are up the hills",
+          "necessaryItem": "banana",
+          "containedItems": [],
+          "command": "use with",
+          "name": "apes",
+          "description": "They are throwing rocks in your direction."
+        }
+      ],
+      "enemies": [],
+      "name": "cliff wall",
+      "description": "A small passage up the hills."
+    },
+    {
+      "visited": 0,
+      "altDescription": "",
+      "ways": [
+        {
+          "direction": "south",
+          "from": "ape horde",
+          "to": "cliff wall",
+          "isFree": true,
+          "altDescription": "",
+          "name": "a way",
+          "description": "A small passage down the hills."
+        },
+        {
+          "direction": "west",
+          "from": "ape horde",
+          "to": "front of a wooden house",
+          "isFree": false,
+          "altDescription": "A rope bridges connect two hills and leads to a small wooden house. But the way is blocked by a giant ape. This must be the ape king.",
+          "name": "rope bridge",
+          "description": "A rope bridges connect two hills and leads to a small wooden house. The ape king lies on the ground. You can pass easily."
+        }
+      ],
+      "items": [],
+      "nonItems": [],
+      "animals": [],
+      "enemies": [
+        {
+          "energy": {
+            "value": 200,
+            "minValue": 0,
+            "maxValue": 200
+          },
+          "state": "removable",
+          "where": "is in center of the room",
+          "necessaryItem": "machete",
+          "containedItems": [],
+          "command": "fight",
+          "name": "ape king",
+          "description": "The big ape is blocking the bridge."
+        }
+      ],
+      "name": "ape horde",
+      "description": "A small plateau on the hills where the apes are living."
+    },
+    {
+      "visited": 0,
+      "altDescription": "",
+      "ways": [
+        {
+          "direction": "north",
+          "from": "front of a wooden house",
+          "to": "inside of a wooden house",
+          "isFree": false,
+          "altDescription": "The door is locked. You will need a key to open it.",
+          "name": "a way",
+          "description": "The door is open so you can get inside."
+        },
+        {
+          "direction": "east",
+          "from": "front of a wooden house",
+          "to": "ape horde",
+          "isFree": true,
+          "altDescription": "",
+          "name": "a way",
+          "description": "At the end of the rope bridge you see the plateau of the apes."
+        }
+      ],
+      "items": [],
+      "nonItems": [
+        {
+          "state": "removable",
+          "where": "blocks the way into the house",
+          "necessaryItem": "key",
+          "containedItems": [],
+          "command": "use with",
+          "name": "door",
+          "description": "It\u0027s a locked wooden door, you need a key to open it."
+        }
+      ],
+      "animals": [],
+      "enemies": [],
+      "name": "front of a wooden house",
+      "description": "You stand in front of the wooden house."
+    },
+    {
+      "visited": 0,
+      "altDescription": "",
+      "ways": [
+        {
+          "direction": "south",
+          "from": "inside of a wooden house",
+          "to": "front of a wooden house",
+          "isFree": true,
+          "altDescription": "",
+          "name": "a way",
+          "description": "Leaving the house."
+        }
+      ],
+      "items": [],
+      "nonItems": [
+        {
+          "where": "on a desk inside the room",
+          "necessaryItem": "broken two-way radio",
+          "containedItems": [],
+          "command": "use with",
+          "name": "two-way radio",
+          "description": "An old two-way radio. It has not been used for a long time but still looks intact"
+        }
+      ],
+      "name": "inside of a wooden house",
+      "description": "Inside the house you find an old radio transmitter. Some parts need to be fixed, but then it should work."
+    }
+  ]
+}
